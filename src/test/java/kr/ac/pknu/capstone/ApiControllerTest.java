@@ -4,19 +4,27 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import kr.ac.pknu.capstone.domain.Data.Data;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.MediaType;
+import org.springframework.restdocs.RestDocumentationExtension;
+import org.springframework.restdocs.mockmvc.MockMvcRestDocumentation;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.io.File;
 
 @SpringBootTest
 @AutoConfigureMockMvc
+@AutoConfigureRestDocs
 public class ApiControllerTest {
 
     @Autowired
@@ -42,17 +50,18 @@ public class ApiControllerTest {
     public void json_넘기기() throws Exception {
 
         mockMvc.perform(
-                MockMvcRequestBuilders.get("/api/")
+                get("/api/")
                         .contentType(MediaType.APPLICATION_JSON)
         )
-                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(status().isOk())
                 .andExpect(
                         MockMvcResultMatchers.content()
                                 .contentTypeCompatibleWith(MediaType.APPLICATION_JSON)
                 )
                 .andExpect(
                         MockMvcResultMatchers.jsonPath("$[0].Vender").value("Naver Cloud")
-                );
+                )
+                .andDo(MockMvcRestDocumentation.document("api"));
 
     }
 
