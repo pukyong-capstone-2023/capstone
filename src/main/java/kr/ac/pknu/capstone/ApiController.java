@@ -25,9 +25,8 @@ public class ApiController {
 
         ClassPathResource resource = new ClassPathResource("data.json");
         File file = resource.getFile();
-        List<Data> datas = objectMapper.readValue(file, ArrayList.class);
+        return objectMapper.readValue(file, ArrayList.class);
 
-        return datas;
     }
 
 }
