@@ -3,6 +3,7 @@ package kr.ac.pknu.capstone;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import kr.ac.pknu.capstone.domain.Data.Data;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ public class ApiControllerTest {
     @Autowired
     ObjectMapper objectMapper;
 
-    // json을 정상적으로 읽는지, 객체 매핑이 되는지 확인
+    @DisplayName("json을 정상적으로 읽는지, 객체 매핑이 되는지 확인")
     @Test
     public void json_읽기() throws Exception {
 
@@ -48,7 +49,7 @@ public class ApiControllerTest {
 
     }
 
-    // api에서 json데이터를 잘 넘기는지 확인
+    @DisplayName("api에서 json데이터를 잘 넘기는지 확인")
     @Test
     public void json_넘기기() throws Exception {
 
