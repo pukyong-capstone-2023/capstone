@@ -21,6 +21,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -30,15 +32,16 @@ public class ApiControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
+    @Autowired
+    ObjectMapper objectMapper;
+
     // json을 정상적으로 읽는지, 객체 매핑이 되는지 확인
     @Test
     public void json_읽기() throws Exception {
 
-        ObjectMapper objectMapper = new ObjectMapper();
-
         ClassPathResource resource = new ClassPathResource("data.json");
         File file = resource.getFile();
-        Data[] datas = objectMapper.readValue(file, Data[].class);
+        List<Data> datas = objectMapper.readValue(file, ArrayList.class);
 
         Assertions.assertThat(datas)
                 .isNotEmpty();
