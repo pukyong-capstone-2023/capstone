@@ -21,7 +21,7 @@ public class ApiController {
     @Autowired
     ObjectMapper objectMapper;
 
-    @GetMapping
+    @GetMapping("/")
     public List<Data> root() throws Exception {
         // 일단 데이터를 통짜로 넘기는 것부터
 

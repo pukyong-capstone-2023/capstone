@@ -44,7 +44,7 @@ public class ApiControllerTest {
 
         ClassPathResource resource = new ClassPathResource("data.json");
         File file = resource.getFile();
-        List<Data> data = objectMapper.readValue(file, ArrayList.class);
+        List<Data> data = objectMapper.readValue(file, new TypeReference<List<Data>>() {});
 
         Assertions.assertThat(data)
                 .isNotEmpty();
