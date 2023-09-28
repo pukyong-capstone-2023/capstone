@@ -41,7 +41,7 @@ public class ApiController {
         List<Data> data = objectMapper.readValue(file, new TypeReference<List<Data>>() {});
 
         return data.stream().filter(d ->
-                (vcpu == 0 || d.getVCPU() == vcpu) && (memory == 0 || d.getMemory() == memory)
+                (vcpu.equals(0) || d.getVCPU().equals(vcpu)) && (memory.equals(0) || d.getMemory().equals(memory))
         ).collect(Collectors.toList());
 
     }
