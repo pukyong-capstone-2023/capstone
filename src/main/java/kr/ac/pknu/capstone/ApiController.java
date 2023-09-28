@@ -3,6 +3,7 @@ package kr.ac.pknu.capstone;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import kr.ac.pknu.capstone.domain.Data.Data;
+import kr.ac.pknu.capstone.service.DataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,18 +21,12 @@ import java.util.stream.Collectors;
 public class ApiController {
 
     @Autowired
-    ObjectMapper objectMapper;
-
-    private List<Data> readJsonData() throws IOException {
-        ClassPathResource resource = new ClassPathResource("data.json");
-        File file = resource.getFile();
-        return objectMapper.readValue(file, new TypeReference<List<Data>>() { });
-    }
+    DataService dataService;
 
     @GetMapping("/")
     public List<Data> root() throws Exception {
         // JPA로 옮기면 수정할 것
-        return readJsonData();
+        return dataService.readJsonData();
     }
 
     @GetMapping("query")
@@ -39,8 +34,9 @@ public class ApiController {
             @RequestParam(value = "vCPU", defaultValue = "0") Integer vcpu, @RequestParam(value = "Memory", defaultValue = "0") Integer memory
     ) throws Exception {
 
-        List<Data> data = readJsonData();
+        List<Data> data = dataService.readJsonData();
 
+        // TODO: 이 부분도 옮기기
         return data.stream().filter(d ->
                 (vcpu.equals(0) || d.getVCPU().equals(vcpu)) && (memory.equals(0) || d.getMemory().equals(memory))
         ).collect(Collectors.toList());

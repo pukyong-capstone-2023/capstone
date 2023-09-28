@@ -35,22 +35,6 @@ public class ApiControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Autowired
-    ObjectMapper objectMapper;
-
-    @DisplayName("json을 정상적으로 읽는지, 객체 매핑이 되는지 확인")
-    @Test
-    public void json_읽기() throws Exception {
-
-        ClassPathResource resource = new ClassPathResource("data.json");
-        File file = resource.getFile();
-        List<Data> data = objectMapper.readValue(file, new TypeReference<List<Data>>() {});
-
-        Assertions.assertThat(data)
-                .isNotEmpty();
-
-    }
-
     @DisplayName("api에서 json데이터를 잘 넘기는지 확인")
     @Test
     public void json_넘기기() throws Exception {
@@ -68,25 +52,6 @@ public class ApiControllerTest {
                         MockMvcResultMatchers.jsonPath("$[0].Vender").value("Naver Cloud")
                 )
                 .andDo(MockMvcRestDocumentation.document("api"));
-
-    }
-
-    @DisplayName("data에서 필터링이 작동하는지 확인")
-    @Test
-    public void filterTest() throws Exception {
-
-        ClassPathResource resource = new ClassPathResource("data.json");
-        File file = resource.getFile();
-        List<Data> data = objectMapper.readValue(file, new TypeReference<List<Data>>() {});
-
-        Integer vcpu = 2, memory = 4;
-        List<Data> res = data.stream().filter(d ->
-                (vcpu.equals(0) || d.getVCPU().equals(vcpu)) && (memory.equals(0) || d.getMemory().equals(memory))
-        ).collect(Collectors.toList());
-
-        Assertions.assertThat(res)
-                .isNotEmpty()
-                .allMatch(d -> d.getVCPU().equals(vcpu) && d.getMemory().equals(memory));
 
     }
 
