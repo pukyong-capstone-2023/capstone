@@ -9,8 +9,13 @@
 == API
 
 === root
-==== HTTTP request
+==== HTTP request
 include::{snippets}/api/http-request.adoc[]
-
-==== HTTTP response
+==== HTTP response
 include::{snippets}/api/http-response.adoc[]
+
+=== query
+==== HTTP request
+include::{snippets}/api/query/http-request.adoc[]
+==== HTTP response
+include::{snippets}/api/query/http-response.adoc[]
