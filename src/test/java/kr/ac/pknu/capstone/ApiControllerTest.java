@@ -80,13 +80,13 @@ public class ApiControllerTest {
         List<Data> data = objectMapper.readValue(file, new TypeReference<List<Data>>() {});
 
         Integer vcpu = 2, memory = 4;
-        var res = data.stream().filter(d ->
-                (vcpu == 0 || d.getVCPU() == vcpu) && (memory == 0 || d.getMemory() == memory)
+        List<Data> res = data.stream().filter(d ->
+                (vcpu.equals(0) || d.getVCPU().equals(vcpu)) && (memory.equals(0) || d.getMemory().equals(memory))
         ).collect(Collectors.toList());
 
         Assertions.assertThat(res)
                 .isNotEmpty()
-                .allMatch(d -> d.getVCPU() == vcpu && d.getMemory() == memory);
+                .allMatch(d -> d.getVCPU().equals(vcpu) && d.getMemory().equals(memory));
 
     }
 
