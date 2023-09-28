@@ -1,5 +1,6 @@
 package kr.ac.pknu.capstone;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import kr.ac.pknu.capstone.domain.Data.Data;
 import org.assertj.core.api.Assertions;
@@ -18,8 +19,12 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import static org.hamcrest.Matchers.everyItem;
+import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
@@ -39,9 +44,9 @@ public class ApiControllerTest {
 
         ClassPathResource resource = new ClassPathResource("data.json");
         File file = resource.getFile();
-        List<Data> datas = objectMapper.readValue(file, ArrayList.class);
+        List<Data> data = objectMapper.readValue(file, ArrayList.class);
 
-        Assertions.assertThat(datas)
+        Assertions.assertThat(data)
                 .isNotEmpty();
 
     }
@@ -63,6 +68,39 @@ public class ApiControllerTest {
                         MockMvcResultMatchers.jsonPath("$[0].Vender").value("Naver Cloud")
                 )
                 .andDo(MockMvcRestDocumentation.document("api"));
+
+    }
+
+    @DisplayName("data에서 필터링이 작동하는지 확인")
+    @Test
+    public void filterTest() throws Exception {
+
+        ClassPathResource resource = new ClassPathResource("data.json");
+        File file = resource.getFile();
+        List<Data> data = objectMapper.readValue(file, new TypeReference<List<Data>>() {});
+
+        Integer vcpu = 2, memory = 4;
+        var res = data.stream().filter(d ->
+                (vcpu == 0 || d.getVCPU() == vcpu) && (memory == 0 || d.getMemory() == memory)
+        ).collect(Collectors.toList());
+
+        Assertions.assertThat(res)
+                .isNotEmpty()
+                .allMatch(d -> d.getVCPU() == vcpu && d.getMemory() == memory);
+
+    }
+
+    @DisplayName("쿼리가 작동하는지 확인")
+    @Test
+    public void queryTest() throws Exception {
+
+        mockMvc.perform(
+                get("/api/query").param("vCPU", "4")
+        )
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$").isArray())
+                .andExpect(jsonPath("$[*].vCPU", everyItem(is(4))))
+                .andDo(MockMvcRestDocumentation.document("api/query"));
 
     }
 
