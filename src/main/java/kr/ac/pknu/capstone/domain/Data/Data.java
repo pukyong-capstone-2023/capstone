@@ -16,7 +16,6 @@ import lombok.NoArgsConstructor;
 @Getter
 @Entity
 public class Data {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

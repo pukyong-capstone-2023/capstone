@@ -15,8 +15,12 @@ import java.util.List;
 @Service
 public class DataService {
 
+    private final ObjectMapper objectMapper;
+
     @Autowired
-    ObjectMapper objectMapper;
+    public DataService(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
+    }
 
     public List<Data> readJsonData() throws IOException {
         ClassPathResource resource = new ClassPathResource("data.json");

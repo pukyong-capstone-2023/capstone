@@ -22,8 +22,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureRestDocs
 public class ApiControllerTest {
 
+    private final MockMvc mockMvc;
+
     @Autowired
-    private MockMvc mockMvc;
+    public ApiControllerTest(MockMvc mockMvc) {
+        this.mockMvc = mockMvc;
+    }
 
     @DisplayName("api에서 json데이터를 잘 넘기는지 확인")
     @Test
