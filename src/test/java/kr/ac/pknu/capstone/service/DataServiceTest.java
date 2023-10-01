@@ -20,13 +20,14 @@ public class DataServiceTest {
     @Autowired
     ObjectMapper objectMapper;
 
+    @Autowired
+    DataService dataService;
+
     @DisplayName("json을 정상적으로 읽는지, 객체 매핑이 되는지 확인")
     @Test
     public void json_읽기() throws Exception {
 
-        ClassPathResource resource = new ClassPathResource("data.json");
-        File file = resource.getFile();
-        List<Data> data = objectMapper.readValue(file, new TypeReference<List<Data>>() {});
+        List<Data> data = dataService.readJsonData();
 
         Assertions.assertThat(data)
                 .isNotEmpty();
@@ -37,9 +38,7 @@ public class DataServiceTest {
     @Test
     public void filterTest() throws Exception {
 
-        ClassPathResource resource = new ClassPathResource("data.json");
-        File file = resource.getFile();
-        List<Data> data = objectMapper.readValue(file, new TypeReference<List<Data>>() {});
+        List<Data> data = dataService.readJsonData();
 
         Integer vcpu = 2, memory = 4;
         List<Data> res = data.stream().filter(d ->

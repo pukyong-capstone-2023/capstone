@@ -2,7 +2,6 @@ package kr.ac.pknu.capstone;
 
 import kr.ac.pknu.capstone.domain.Data.Data;
 import kr.ac.pknu.capstone.service.DataService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,8 +14,11 @@ import java.util.stream.Collectors;
 @RequestMapping("api")
 public class ApiController {
 
-    @Autowired
-    DataService dataService;
+    private final DataService dataService;
+
+    public ApiController(DataService dataService) {
+        this.dataService = dataService;
+    }
 
     @GetMapping("/")
     public List<Data> root() throws Exception {
