@@ -1,0 +1,21 @@
+= Cloud comparison service
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+:sectlinks:
+
+== API
+
+=== root
+==== HTTP request
+include::{snippets}/api/http-request.adoc[]
+==== HTTP response
+include::{snippets}/api/http-response.adoc[]
+
+=== query
+==== HTTP request
+include::{snippets}/api/query/http-request.adoc[]
+==== HTTP response
+include::{snippets}/api/query/http-response.adoc[]

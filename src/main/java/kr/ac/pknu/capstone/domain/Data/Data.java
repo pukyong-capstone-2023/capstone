@@ -2,11 +2,12 @@ package kr.ac.pknu.capstone.domain.Data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
 public class Data {
 
     @JsonProperty("Vender")

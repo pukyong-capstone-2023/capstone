@@ -30,8 +30,6 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-data-jpa' // jpa
-	implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.5' // json 파서
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	asciidoctorExt "org.springframework.restdocs:spring-restdocs-asciidoctor"
