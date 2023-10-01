@@ -15,12 +15,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 public class DataRepositoryTest {
 
-    private final DataRepository dataRepository;
-
     @Autowired
-    public DataRepositoryTest(DataRepository dataRepository) {
-        this.dataRepository = dataRepository;
-    }
+    private DataRepository dataRepository;
 
     @AfterEach
     public void clean() {
