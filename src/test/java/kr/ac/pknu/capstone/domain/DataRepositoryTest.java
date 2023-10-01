@@ -2,9 +2,7 @@ package kr.ac.pknu.capstone.domain;
 
 import kr.ac.pknu.capstone.domain.Data.Data;
 import kr.ac.pknu.capstone.domain.Data.DataRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
