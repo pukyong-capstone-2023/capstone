@@ -12,15 +12,15 @@ import lombok.NoArgsConstructor;
 @Builder
 public class UpdateRequestDto {
 
-    String vendor;
-    String name;
-    String io;
-    String type;
-    Integer vCPU;
-    Integer memory;
-    String currencyExchangeRates;
-    Integer costPerHour;
-    String etc;
+    private String vendor;
+    private String name;
+    private String io;
+    private String type;
+    private Integer vCPU;
+    private Integer memory;
+    private String currencyExchangeRates;
+    private Integer costPerHour;
+    private String etc;
 
     public Data toEntity() {
         return Data.builder()
