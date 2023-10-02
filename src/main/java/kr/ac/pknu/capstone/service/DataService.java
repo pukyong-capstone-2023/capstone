@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import kr.ac.pknu.capstone.domain.Data.Data;
 import kr.ac.pknu.capstone.domain.Data.DataRepository;
 import kr.ac.pknu.capstone.web.dto.UpdateRequestDto;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
@@ -16,16 +17,11 @@ import java.util.List;
 
 
 @Service
+@RequiredArgsConstructor
 public class DataService {
 
     private final ObjectMapper objectMapper;
     private final DataRepository dataRepository;
-
-    @Autowired
-    public DataService(ObjectMapper objectMapper, DataRepository dataRepository) {
-        this.objectMapper = objectMapper;
-        this.dataRepository = dataRepository;
-    }
 
     public List<Data> readJsonData() throws IOException {
         ClassPathResource resource = new ClassPathResource("data.json");

@@ -3,6 +3,7 @@ package kr.ac.pknu.capstone.web;
 import kr.ac.pknu.capstone.domain.Data.Data;
 import kr.ac.pknu.capstone.service.DataService;
 import kr.ac.pknu.capstone.web.dto.UpdateRequestDto;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,13 +11,10 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("api")
+@RequiredArgsConstructor
 public class ApiController {
 
     private final DataService dataService;
-
-    public ApiController(DataService dataService) {
-        this.dataService = dataService;
-    }
 
     @GetMapping("/")
     public List<Data> root() throws Exception {
