@@ -18,8 +18,7 @@ public class ApiController {
 
     @GetMapping("/")
     public List<Data> root() throws Exception {
-        // TODO: DTO로 수정하기
-        return dataService.readJsonData();
+        return dataService.findAll();
     }
 
     @GetMapping("query")
@@ -27,8 +26,9 @@ public class ApiController {
             @RequestParam(value = "vCPU", defaultValue = "0") Integer vcpu, @RequestParam(value = "Memory", defaultValue = "0") Integer memory
     ) throws Exception {
 
-        List<Data> data = dataService.readJsonData();
+        List<Data> data = dataService.findAll();
 
+        // TODO: dataService 내에서 로직 처리하도록 변경하기
         return data.stream().filter(d ->
                 (vcpu.equals(0) || d.getVCPU().equals(vcpu)) && (memory.equals(0) || d.getMemory().equals(memory))
         ).collect(Collectors.toList());
