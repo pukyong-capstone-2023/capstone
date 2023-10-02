@@ -24,7 +24,7 @@ public class DataServiceTest {
     @Test
     public void json_읽기() throws Exception {
 
-        List<Data> data = dataService.readJsonData();
+        List<Data> data = dataService.findAll();
 
         Assertions.assertThat(data)
                 .isNotEmpty();
@@ -35,7 +35,7 @@ public class DataServiceTest {
     @Test
     public void filterTest() throws Exception {
 
-        List<Data> data = dataService.readJsonData();
+        List<Data> data = dataService.findAll();
 
         Integer vcpu = 2, memory = 4;
         List<Data> res = data.stream().filter(d ->

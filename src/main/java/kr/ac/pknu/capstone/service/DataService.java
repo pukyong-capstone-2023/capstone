@@ -23,10 +23,19 @@ public class DataService {
     private final ObjectMapper objectMapper;
     private final DataRepository dataRepository;
 
+    /**
+     * @deprecated json을 읽는 코드입니다. JPA를 사용하는 'findAll'을 대신 사용해주세요!
+     */
+    @Deprecated
     public List<Data> readJsonData() throws IOException {
         ClassPathResource resource = new ClassPathResource("data.json");
         File file = resource.getFile();
         return objectMapper.readValue(file, new TypeReference<List<Data>>() {});
+    }
+
+    @Transactional
+    public List<Data> findAll() {
+        return dataRepository.findAll();
     }
 
     @Transactional
