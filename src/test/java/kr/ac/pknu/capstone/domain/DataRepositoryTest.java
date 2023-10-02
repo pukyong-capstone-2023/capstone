@@ -32,15 +32,15 @@ public class DataRepositoryTest {
     public void repositoryTest() {
 
         Data data = Data.builder()
-                .Vendor("vendor")
-                .Name("instance")
-                .IO("io")
-                .Type("type")
+                .vendor("vendor")
+                .name("instance")
+                .io("io")
+                .type("type")
                 .vCPU(1)
-                .Memory(1)
-                .CurrencyExchangeRates("rate")
-                .CostPerHour(1)
-                .Etc("etc")
+                .memory(1)
+                .currencyExchangeRates("rate")
+                .costPerHour(1)
+                .etc("etc")
                 .build();
         dataRepository.save(data);
 

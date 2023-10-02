@@ -14,15 +14,11 @@ import java.util.stream.Collectors;
 @SpringBootTest
 public class DataServiceTest {
 
-    private final ObjectMapper objectMapper;
-
-    private final DataService dataService;
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @Autowired
-    public DataServiceTest(ObjectMapper objectMapper, DataService dataService) {
-        this.objectMapper = objectMapper;
-        this.dataService = dataService;
-    }
+    private  DataService dataService;
 
     @DisplayName("json을 정상적으로 읽는지, 객체 매핑이 되는지 확인")
     @Test

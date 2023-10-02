@@ -1,4 +1,4 @@
-package kr.ac.pknu.capstone;
+package kr.ac.pknu.capstone.web;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

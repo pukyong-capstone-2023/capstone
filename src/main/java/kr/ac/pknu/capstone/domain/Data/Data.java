@@ -21,30 +21,30 @@ public class Data {
     private Long id;
 
     @JsonProperty("Vender")
-    private String Vendor;
+    private String vendor;
 
     @JsonProperty("Name")
-    private String Name;
+    private String name;
 
     @JsonProperty("I/O")
-    private String IO;
+    private String io;
 
     @JsonProperty("Type")
-    private String Type;
+    private String type;
 
     @JsonProperty("vCPU")
     private Integer vCPU;
 
     @JsonProperty("Memory(GiB)")
-    private Integer Memory;
+    private Integer memory;
 
     @JsonProperty("Currency exchange rates")
-    private String CurrencyExchangeRates;
+    private String currencyExchangeRates;
 
     @JsonProperty("Cost per hour")
-    private Integer CostPerHour;
+    private Integer costPerHour;
 
     @JsonProperty("etc")
-    private String Etc;
+    private String etc;
 
 }

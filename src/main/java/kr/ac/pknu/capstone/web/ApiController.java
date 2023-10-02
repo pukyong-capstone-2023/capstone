@@ -1,11 +1,9 @@
-package kr.ac.pknu.capstone;
+package kr.ac.pknu.capstone.web;
 
 import kr.ac.pknu.capstone.domain.Data.Data;
 import kr.ac.pknu.capstone.service.DataService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import kr.ac.pknu.capstone.web.dto.UpdateRequestDto;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,7 +20,7 @@ public class ApiController {
 
     @GetMapping("/")
     public List<Data> root() throws Exception {
-        // JPA로 옮기면 수정할 것
+        // TODO: DTO로 수정하기
         return dataService.readJsonData();
     }
 
@@ -33,11 +31,15 @@ public class ApiController {
 
         List<Data> data = dataService.readJsonData();
 
-        // TODO: 이 부분도 옮기기
         return data.stream().filter(d ->
                 (vcpu.equals(0) || d.getVCPU().equals(vcpu)) && (memory.equals(0) || d.getMemory().equals(memory))
         ).collect(Collectors.toList());
 
+    }
+
+    @PostMapping("update")
+    public Long update(@RequestBody UpdateRequestDto updateRequestDto) {
+        return dataService.save(updateRequestDto);
     }
 
 }
