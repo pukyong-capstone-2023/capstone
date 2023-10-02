@@ -17,6 +17,7 @@ public class DataServiceTest {
     @Autowired
     private ObjectMapper objectMapper;
 
+    // TODO: mock repository 활용해서 리포지토리 분리하기
     @Autowired
     private  DataService dataService;
 
