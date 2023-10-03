@@ -43,12 +43,12 @@ public class DataServiceTest {
 
         Integer vcpu = 2, memory = 4;
         List<Data> res = data.stream().filter(d ->
-                (vcpu.equals(0) || d.getVCPU().equals(vcpu)) && (memory.equals(0) || d.getMemory().equals(memory))
+                (vcpu.equals(0) || d.getVcpu().equals(vcpu)) && (memory.equals(0) || d.getMemory().equals(memory))
         ).collect(Collectors.toList());
 
         Assertions.assertThat(res)
                 .isNotEmpty()
-                .allMatch(d -> d.getVCPU().equals(vcpu) && d.getMemory().equals(memory));
+                .allMatch(d -> d.getVcpu().equals(vcpu) && d.getMemory().equals(memory));
 
     }
 

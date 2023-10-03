@@ -2,12 +2,11 @@ package kr.ac.pknu.capstone;
 
 import kr.ac.pknu.capstone.domain.Data.Data;
 import kr.ac.pknu.capstone.service.DataService;
+import kr.ac.pknu.capstone.web.dto.UpdateRequestDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,9 +24,14 @@ public class ApiController {
 
     @GetMapping("query")
     public List<Data> query(
-            @RequestParam(value = "vCPU", defaultValue = "0") Integer vcpu, @RequestParam(value = "Memory", defaultValue = "0") Integer memory
+            @RequestParam(value = "vCPU", defaultValue = "0") int vCPU, @RequestParam(value = "Memory", defaultValue = "0") int memory
     ) throws Exception {
-        return dataService.find(vcpu, memory);
+        return dataService.find(vCPU, memory);
+    }
+
+    @PostMapping("update")
+    public void update(@RequestBody UpdateRequestDto updateRequestDto) throws Exception {
+        dataService.save(updateRequestDto);
     }
 
 }

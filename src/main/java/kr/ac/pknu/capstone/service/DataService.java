@@ -3,6 +3,7 @@ package kr.ac.pknu.capstone.service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import kr.ac.pknu.capstone.domain.Data.Data;
+import kr.ac.pknu.capstone.web.dto.UpdateRequestDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
@@ -35,8 +36,13 @@ public class DataService {
     public List<Data> find(int vCPU, int memory) throws IOException {
         if(data == null) readJsonData();
         return data.stream().filter(d ->
-                (vCPU == 0 || d.getVCPU().equals(vCPU)) && ( memory == 0 || d.getMemory().equals(memory))
+                (vCPU == 0 || d.getVcpu().equals(vCPU)) && ( memory == 0 || d.getMemory().equals(memory))
         ).collect(Collectors.toList());
+    }
+
+    public void save(UpdateRequestDto updateRequestDto) throws IOException {
+        if(data == null) readJsonData();
+        data.add(updateRequestDto.toEntity());
     }
 
 }
