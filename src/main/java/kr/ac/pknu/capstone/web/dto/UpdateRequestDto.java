@@ -16,7 +16,7 @@ public class UpdateRequestDto {
     private String name;
     private String io;
     private String type;
-    private Integer vCPU;
+    private Integer vcpu;
     private Integer memory;
     private String currencyExchangeRates;
     private Integer costPerHour;
@@ -28,7 +28,7 @@ public class UpdateRequestDto {
                 .name(name)
                 .io(io)
                 .type(type)
-                .vCPU(vCPU)
+                .vcpu(vcpu)
                 .memory(memory)
                 .currencyExchangeRates(currencyExchangeRates)
                 .costPerHour(costPerHour)

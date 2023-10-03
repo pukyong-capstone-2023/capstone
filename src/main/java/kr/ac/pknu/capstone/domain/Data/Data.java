@@ -25,7 +25,7 @@ public class Data {
     private String type;
 
     @JsonProperty("vCPU")
-    private Integer vCPU;
+    private Integer vcpu;
 
     @JsonProperty("Memory(GiB)")
     private Integer memory;
