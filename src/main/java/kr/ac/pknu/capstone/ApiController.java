@@ -20,22 +20,14 @@ public class ApiController {
 
     @GetMapping("/")
     public List<Data> root() throws Exception {
-        // JPA로 옮기면 수정할 것
-        return dataService.readJsonData();
+        return dataService.findAll();
     }
 
     @GetMapping("query")
     public List<Data> query(
             @RequestParam(value = "vCPU", defaultValue = "0") Integer vcpu, @RequestParam(value = "Memory", defaultValue = "0") Integer memory
     ) throws Exception {
-
-        List<Data> data = dataService.readJsonData();
-
-        // TODO: 이 부분도 옮기기
-        return data.stream().filter(d ->
-                (vcpu.equals(0) || d.getVCPU().equals(vcpu)) && (memory.equals(0) || d.getMemory().equals(memory))
-        ).collect(Collectors.toList());
-
+        return dataService.find(vcpu, memory);
     }
 
 }

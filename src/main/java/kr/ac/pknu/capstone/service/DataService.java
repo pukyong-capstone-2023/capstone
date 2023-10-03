@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -18,10 +19,24 @@ public class DataService {
     @Autowired
     ObjectMapper objectMapper;
 
-    public List<Data> readJsonData() throws IOException {
+    List<Data> data;
+
+    private void readJsonData() throws IOException {
         ClassPathResource resource = new ClassPathResource("data.json");
         File file = resource.getFile();
-        return objectMapper.readValue(file, new TypeReference<List<Data>>() {});
+        data = objectMapper.readValue(file, new TypeReference<List<Data>>() {});
+    }
+
+    public List<Data> findAll() throws IOException {
+        if(data == null) readJsonData();
+        return data;
+    }
+
+    public List<Data> find(int vcpu, int memory) throws IOException {
+        if(data == null) readJsonData();
+        return data.stream().filter(d ->
+                (vcpu == 0 || d.getVCPU().equals(vcpu)) && ( memory == 0 || d.getMemory().equals(memory))
+        ).collect(Collectors.toList());
     }
 
 }
