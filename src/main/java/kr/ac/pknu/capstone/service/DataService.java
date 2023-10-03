@@ -32,10 +32,10 @@ public class DataService {
         return data;
     }
 
-    public List<Data> find(int vcpu, int memory) throws IOException {
+    public List<Data> find(int vCPU, int memory) throws IOException {
         if(data == null) readJsonData();
         return data.stream().filter(d ->
-                (vcpu == 0 || d.getVCPU().equals(vcpu)) && ( memory == 0 || d.getMemory().equals(memory))
+                (vCPU == 0 || d.getVCPU().equals(vCPU)) && ( memory == 0 || d.getMemory().equals(memory))
         ).collect(Collectors.toList());
     }
 
