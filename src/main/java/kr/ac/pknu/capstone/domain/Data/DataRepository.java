@@ -30,6 +30,7 @@ public class DataRepository {
     private void saveJsonData() throws Exception {
 
         // TODO: 테스트코드 작성해서 작동 확인 후 save에 추가하기
+        // 테스트코드에서는 vendor를 'test'로 하고, afterEach에서 제거해주기
         ClassPathResource resource = new ClassPathResource("data.json");
         File file = resource.getFile();
         FileWriter writer = new FileWriter(file, false);
