@@ -39,11 +39,11 @@ public class DataRepository {
 
     }
 
-    public List<Data> findAll() throws IOException {
+    public List<Data> findAll() {
         return data;
     }
 
-    public void save(Data d) throws IOException {
+    public void save(Data d) {
         data.add(d);
     }
 

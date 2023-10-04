@@ -22,18 +22,18 @@ public class DataService {
 
     private final DataRepository dataRepository;
 
-    public List<Data> findAll() throws IOException {
+    public List<Data> findAll() {
         return dataRepository.findAll();
     }
 
-    public List<Data> find(int vCPU, int memory) throws IOException {
+    public List<Data> find(int vCPU, int memory) {
         // TODO: 이것도 옮기기
         return dataRepository.findAll().stream().filter(d ->
                 (vCPU == 0 || d.getVcpu().equals(vCPU)) && ( memory == 0 || d.getMemory().equals(memory))
         ).collect(Collectors.toList());
     }
 
-    public void save(UpdateRequestDto updateRequestDto) throws IOException {
+    public void save(UpdateRequestDto updateRequestDto) {
         dataRepository.save(updateRequestDto.toEntity());
     }
 

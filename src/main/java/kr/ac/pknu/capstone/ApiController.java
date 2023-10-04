@@ -18,7 +18,7 @@ public class ApiController {
     DataService dataService;
 
     @GetMapping("/")
-    public List<Data> root() throws Exception {
+    public List<Data> root() {
         return dataService.findAll();
     }
 
@@ -30,7 +30,7 @@ public class ApiController {
     }
 
     @PostMapping("update")
-    public void update(@RequestBody UpdateRequestDto updateRequestDto) throws Exception {
+    public void update(@RequestBody UpdateRequestDto updateRequestDto) {
         dataService.save(updateRequestDto);
     }
 
