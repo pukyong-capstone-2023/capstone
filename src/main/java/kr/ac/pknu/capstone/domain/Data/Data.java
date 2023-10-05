@@ -2,39 +2,41 @@ package kr.ac.pknu.capstone.domain.Data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Getter
 public class Data {
 
     @JsonProperty("Vender")
-    private String Vendor;
+    private String vendor;
 
     @JsonProperty("Name")
-    private String Name;
+    private String name;
 
     @JsonProperty("I/O")
-    private String IO;
+    private String io;
 
     @JsonProperty("Type")
-    private String Type;
+    private String type;
 
     @JsonProperty("vCPU")
-    private Integer vCPU;
+    private Integer vcpu;
 
     @JsonProperty("Memory(GiB)")
-    private Integer Memory;
+    private Integer memory;
 
     @JsonProperty("Currency exchange rates")
-    private String CurrencyExchangeRates;
+    private String currencyExchangeRates;
 
     @JsonProperty("Cost per hour")
-    private Integer CostPerHour;
+    private Integer costPerHour;
 
     @JsonProperty("etc")
-    private String Etc;
+    private String etc;
 
 }
