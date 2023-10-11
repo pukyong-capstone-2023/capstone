@@ -1,19 +1,16 @@
 package kr.ac.pknu.capstone.domain;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import kr.ac.pknu.capstone.domain.Data.Data;
 import kr.ac.pknu.capstone.domain.Data.DataRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 
-import java.io.File;
 import java.util.List;
-import java.util.stream.Collectors;
 
+@WebMvcTest(DataRepository.class)
 public class DataRepositoryTest {
 
     @Autowired
