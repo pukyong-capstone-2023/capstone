@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class DataRepository {
@@ -41,6 +42,12 @@ public class DataRepository {
 
     public List<Data> findAll() {
         return data;
+    }
+
+    public List<Data> search(int vCPU, int memory) {
+        return data.stream().filter(d ->
+                (vCPU == 0 || d.getVcpu().equals(vCPU)) && ( memory == 0 || d.getMemory().equals(memory))
+        ).collect(Collectors.toList());
     }
 
     public void save(Data d) {
