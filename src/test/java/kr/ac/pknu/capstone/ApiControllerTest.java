@@ -70,10 +70,25 @@ public class ApiControllerTest {
 
     }
 
+    @DisplayName("쿼리에 음수를 넣어서 확인")
+    @Test
+    public void queryTest2() throws Exception {
+
+        MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
+        params.add("vCPU", "-1");
+
+        mockMvc.perform(
+                        get("/api/query").params(params)
+                )
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$").isArray())
+                .andExpect(jsonPath("$").isEmpty());
+
+    }
 
     @DisplayName("쿼리에 문자열 입력 시 오류를 뿜는지 확인")
     @Test
-    public void queryTest2() throws Exception {
+    public void queryTest3() throws Exception {
 
         MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
         params.add("vCPU", "test");
@@ -81,11 +96,7 @@ public class ApiControllerTest {
         mockMvc.perform(
                         get("/api/query").params(params)
                 )
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$").isArray())
-                .andExpect(jsonPath("$[*].vCPU", everyItem(is(4))))
-                .andDo(MockMvcRestDocumentation.document("api/query"));
-
+                .andExpect(status().isBadRequest());
     }
 
 }
