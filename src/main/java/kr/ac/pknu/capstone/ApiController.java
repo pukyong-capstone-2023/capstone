@@ -27,9 +27,4 @@ public class ApiController {
         return dataService.find(vCPU, memory);
     }
 
-    @PostMapping("update")
-    public void update(@RequestBody UpdateRequestDto updateRequestDto) {
-        dataService.save(updateRequestDto);
-    }
-
 }

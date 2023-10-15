@@ -38,8 +38,4 @@ public class DataRepository {
         ).collect(Collectors.toList());
     }
 
-    public void save(Data d) {
-        data.add(d);
-    }
-
 }

@@ -23,8 +23,4 @@ public class DataService {
         return dataRepository.search(vCPU, memory);
     }
 
-    public void save(UpdateRequestDto updateRequestDto) {
-        dataRepository.save(updateRequestDto.toEntity());
-    }
-
 }
