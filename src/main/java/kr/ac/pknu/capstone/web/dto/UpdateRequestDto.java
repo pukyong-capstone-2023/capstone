@@ -1,13 +1,10 @@
 package kr.ac.pknu.capstone.web.dto;
 
 import kr.ac.pknu.capstone.domain.Data.Data;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
 public class UpdateRequestDto {

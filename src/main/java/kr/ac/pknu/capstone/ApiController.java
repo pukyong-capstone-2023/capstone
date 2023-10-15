@@ -3,17 +3,17 @@ package kr.ac.pknu.capstone;
 import kr.ac.pknu.capstone.domain.Data.Data;
 import kr.ac.pknu.capstone.service.DataService;
 import kr.ac.pknu.capstone.web.dto.UpdateRequestDto;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("api")
 public class ApiController {
 
-    @Autowired
-    DataService dataService;
+    private final DataService dataService;
 
     @GetMapping("/")
     public List<Data> root() {

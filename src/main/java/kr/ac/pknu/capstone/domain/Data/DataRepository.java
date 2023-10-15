@@ -2,6 +2,7 @@ package kr.ac.pknu.capstone.domain.Data;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Repository;
 
@@ -17,6 +18,7 @@ public class DataRepository {
     private final ObjectMapper objectMapper;
     private final List<Data> data;
 
+    @Autowired
     public DataRepository(ObjectMapper objectMapper) throws IOException {
         this.objectMapper = objectMapper;
         this.data = readJsonData();
@@ -24,8 +26,7 @@ public class DataRepository {
 
     private List<Data> readJsonData() throws IOException {
         ClassPathResource resource = new ClassPathResource("data.json");
-        File file = resource.getFile();
-        return objectMapper.readValue(file, new TypeReference<List<Data>>() {});
+        return objectMapper.readValue(resource.getInputStream(), new TypeReference<List<Data>>() {});
     }
 
     private void saveJsonData() throws Exception {
