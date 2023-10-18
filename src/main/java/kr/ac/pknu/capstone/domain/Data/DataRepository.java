@@ -34,7 +34,7 @@ public class DataRepository {
 
     public List<Data> search(int vCPU, int memory) {
         return data.stream().filter(d ->
-                (vCPU == 0 || d.getVcpu().equals(vCPU)) && ( memory == 0 || d.getMemory().equals(memory))
+                (vCPU == 0 || d.getVcpu().equals(vCPU)) && (memory == 0 || d.getMemory().equals(memory))
         ).collect(Collectors.toList());
     }
 

@@ -1,6 +1,7 @@
 package kr.ac.pknu.capstone.docs;
 
 
+import kr.ac.pknu.capstone.HelloController;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,7 +19,7 @@ import static org.springframework.restdocs.mockmvc.RestDocumentationRequestBuild
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest
+@WebMvcTest(controllers = HelloController.class)
 @ExtendWith({RestDocumentationExtension.class})
 class HelloDocs {
 

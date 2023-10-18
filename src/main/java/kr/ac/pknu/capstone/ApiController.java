@@ -2,9 +2,11 @@ package kr.ac.pknu.capstone;
 
 import kr.ac.pknu.capstone.domain.Data.Data;
 import kr.ac.pknu.capstone.service.DataService;
-import kr.ac.pknu.capstone.web.dto.UpdateRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -14,7 +16,6 @@ import java.util.List;
 public class ApiController {
 
     private final DataService dataService;
-
     @GetMapping("/")
     public List<Data> root() {
         return dataService.findAll();

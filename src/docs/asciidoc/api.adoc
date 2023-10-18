@@ -9,13 +9,22 @@
 == API
 
 === root
+전체 데이터를 가져옵니다.
+
 ==== HTTP request
 include::{snippets}/api/http-request.adoc[]
+
 ==== HTTP response
 include::{snippets}/api/http-response.adoc[]
 
 === query
+입력한 vCPU 개수와 메모리 개수가 일치한 데이터를 가져옵니다.
+vCPU 또는 메모리를 공란으로 두면 모든 vCPU 또는 메모리의 데이터를 가져옵니다.
+
+아래 예제 코드에서는 vCPU 개수가 4개인 데이터를 모두 가져옵니다.
+
 ==== HTTP request
 include::{snippets}/api/query/http-request.adoc[]
+
 ==== HTTP response
 include::{snippets}/api/query/http-response.adoc[]
