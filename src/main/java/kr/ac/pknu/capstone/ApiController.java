@@ -23,7 +23,8 @@ public class ApiController {
 
     @GetMapping("query")
     public List<Data> query(
-            @RequestParam(value = "vCPU", defaultValue = "0") int vCPU, @RequestParam(value = "Memory", defaultValue = "0") int memory
+            @RequestParam(value = "vCPU", defaultValue = "0") int vCPU,
+            @RequestParam(value = "Memory", defaultValue = "0") int memory
     ) throws Exception {
         return dataService.find(vCPU, memory);
     }
