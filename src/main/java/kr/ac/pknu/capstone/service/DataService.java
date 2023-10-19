@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 @Service
@@ -21,14 +20,7 @@ public class DataService {
     }
 
     public List<Data> find(int vCPU, int memory) {
-        // TODO: 이것도 옮기기
-        return dataRepository.findAll().stream().filter(d ->
-                (vCPU == 0 || d.getVcpu().equals(vCPU)) && ( memory == 0 || d.getMemory().equals(memory))
-        ).collect(Collectors.toList());
-    }
-
-    public void save(UpdateRequestDto updateRequestDto) {
-        dataRepository.save(updateRequestDto.toEntity());
+        return dataRepository.search(vCPU, memory);
     }
 
 }
