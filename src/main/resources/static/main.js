@@ -1,14 +1,14 @@
 import jsonData from "./data.js";
-import axios from 'axios'
+
+console.log("test")
 
 const MONTH = 30;
 let chart;
 
 // axios 이용해서 데이터 가져오기
 const axiosGetData = async() => {
-  const url = "localhost:8080/api/"
-  const response = await axios.get(url)
-  console.log(response.Vender);
+  const response = await axios.get("https://localhost:8080/api/")
+  console.log(response.data)
 }
 
 axiosGetData()
