@@ -1,0 +1,12 @@
+* {
+    padding: 2px;
+}
+
+body {
+    margin: 10px;
+    width: 1200px
+}
+
+.content-header {
+    border: 1px black solid;
+}
