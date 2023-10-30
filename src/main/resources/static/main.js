@@ -1,7 +1,5 @@
 import jsonData from "./data.js";
 
-console.log("test")
-
 const MONTH = 30;
 let chart;
 
