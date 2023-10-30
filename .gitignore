@@ -178,6 +178,7 @@ gradle-app.setting
 
 ### Rest Docs ###
 
-/src/main/resources/
+# /src/main/resources/
+# static 웹 전송을 위해
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,visualstudiocode,gradle,java,react
