@@ -1,0 +1,67 @@
+.introduce_headerbar {
+    /* margin-bottom: 50px; */
+}
+
+.introduce_slidercontentbar{
+    background-color: #EBE9EC;
+}
+
+.introduce_comentbar {
+    height: 300px;
+}
+
+.slidercontents_aws {
+    height: 480px;
+    background-image: url(./img/AWSCloudimg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slidercontents_ncloud {
+    height: 480px;
+    background-image: url(./img/NCloudimg.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slidercontents_micro {
+    height: 480px;
+    background-image: url(./img/MICloudimg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slidercontents_samsung {
+    height: 480px;
+    background-image: url(./img/SAMCloudimg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapText {
+    margin-top: 340px;
+}
+
+.navigateResultPage {
+    color: white;
+    background-color: #6205E9;
+}
