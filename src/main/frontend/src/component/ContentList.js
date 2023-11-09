@@ -1,38 +1,13 @@
 import './ContentList.css';
 
 function ContentList() {
-<<<<<<< HEAD
-    return(
-        <div className="content-header" style={{display: 'flex', marginBottom: '50px', backgroundColor: '#EBE9EC'}}>
-            <div className="selections" style={{paddingLeft: '50px', paddingRight: '50px'}}>
-                <div style={{backgroundColor: '#ffffff', borderRadius: '20px 20px 20px 20px', padding: '5px', marginTop: '20px'}}>
-                    <h3 style={{color : '#8A2AEF', paddingBottom: '20px', fontSize: '40px'}}>Cloud 선택</h3>
-                </div>
-                <div style={{backgroundColor: '#ffffff', borderRadius: '20px 20px 20px 20px', padding: '10px', marginTop: '20px', marginBottom: '20px', display: 'grid'}}>
-                    <label className="selection">AWS
-                        <input type="checkbox" name="cloud" value="AWS" checked="true"/>
-                    </label>
-                    <label className="selection">NCloud
-                        <input type="checkbox" name="cloud" value="Naver Clould" checked="true"/>
-                    </label>
-                    <label className="selection">GCP
-                        <input type="checkbox" name="cloud" value="GCP" checked="true"/>
-                    </label>
-                </div>
-            </div>
-            <div className="options_total" style={{display: 'flex'}}>
-                <div className="options1" style={{paddingRight: '40px', width: '240px'}}>
-                    <div className="title" style={{backgroundColor: '#ffffff', borderRadius: '20px 20px 20px 20px', marginTop: '20px', display : 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                        <h3 style={{color : '#8A2AEF', paddingBottom: '20px', fontSize: '40px'}}>기간</h3>
-=======
     return (
         <div className="content-header">
             <div className="selections">
                 <div className="content_options">
                     <div className="selections_content">
                         <h3 className="selections_h3">Cloud 선택</h3>
->>>>>>> a0fa2c1 (bootstrap)
-                    </div>
+                    </div> 
                     <div className="selections_option">
                         <label className="selection">AWS
                             <input type="checkbox" name="cloud" value="AWS" checked="true" />
