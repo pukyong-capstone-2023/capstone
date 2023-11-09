@@ -1,6 +1,6 @@
 function AddContent(){
     return(
-        <div className="comment">
+        <div>
             <h3>주의사항</h3>
             <blockquote>
                 <p>
