@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import {Route, Routes} from 'react-router-dom';
+import IntroducePage from './IntroducePage';
+import ResultListPage from './ResultListPage';
 
 function App() {
     const [hello, setHello] = useState('')
