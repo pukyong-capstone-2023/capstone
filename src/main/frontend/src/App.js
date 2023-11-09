@@ -11,16 +11,9 @@ function App() {
     }, []);
 
     return (
-        <div className='App'>
-            <div>
-                백엔드에서 가져온 데이터입니다 : {hello}
-            </div>
-            <Routes>
-                <Route path='/' element={<IntroducePage /> } />
-                <Route path='/ResultListPage' element={<ResultListPage/> } />
-            </Routes>
+        <div>
+            백엔드에서 가져온 데이터입니다 : {hello}
         </div>
-       
     );
 }
 
