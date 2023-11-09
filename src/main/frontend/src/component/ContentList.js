@@ -15,15 +15,6 @@ function ContentList() {
                     <label className="selection">GCP
                         <input type="checkbox" name="cloud" value="GCP" checked="true"/>
                     </label>
-                    <label className="selection">CLOUD_A
-                        <input type="checkbox" name="cloud" value="GCP" checked="true"/>
-                    </label>
-                    <label className="selection">CLOUD_B
-                        <input type="checkbox" name="cloud" checked="true"/>
-                    </label>
-                    <label className="selection">CLOUD_C
-                        <input type="checkbox" name="cloud" checked="true"/>
-                    </label>
                 </div>
             </div>
             <div className="options_total" style={{display: 'flex'}}>
