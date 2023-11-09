@@ -1,6 +1,6 @@
 import Header from './component/Header';
 import ContentList from "./component/ContentList";
-import Chart from './component/Chart';
+import ChartComponent from './component/ChartComponent';
 import AddContent from './component/AddContent';
 import Footer from './component/Footer';
 
@@ -10,7 +10,7 @@ function ResultListPage() {
         <div>
             <Header />
             <ContentList/>
-            <Chart />
+            <ChartComponent />
             <AddContent />
             <Footer />
         </div>
