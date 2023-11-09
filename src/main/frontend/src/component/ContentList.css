@@ -1,0 +1,40 @@
+.content-header {
+    margin-bottom : 50px;
+    height: 560px;
+    background-color : #EBE9EC;
+}
+
+.content_options {
+    width: 300px;
+    padding: 5px;
+}
+
+.selections{
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+}
+.selections_h3 {
+    color: #8A2AEF; 
+    padding-bottom: 20px; 
+    font-size: 40px
+}
+
+
+.selections_content {
+    background-color: #ffffff;
+    border-radius: 20px 20px 20px 20px;
+    width: 260px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.selections_option {
+    background-color : #ffffff;
+    border-radius : 20px 20px 20px 20px; 
+    width: 260px;
+    padding: 10px; 
+    margin-top : 20px;
+    margin-bottom : 20px;
+    display: grid; 
+}
