@@ -4,7 +4,7 @@ import main from '../main';
 function ChartComponent() {
 
     useEffect(() => {
-        // main();
+        main();
     })
 
     return(

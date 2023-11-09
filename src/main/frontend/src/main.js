@@ -1,4 +1,8 @@
 import jsonData from "./data.js";
+import axios from "axios";
+import { Chart } from "chart.js/auto";
+
+export default function main() {
 
 const MONTH = 30;
 let chart;
@@ -217,3 +221,4 @@ memory.addEventListener("change", function () {
   fixedMemory = memory.value;
   makeChart();
 });
+}
