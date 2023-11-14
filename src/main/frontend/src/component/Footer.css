@@ -1,6 +1,6 @@
 .coment{
     background-color : #EBE9EC;
-    height: 400px;
+    display: grid;
 }
 
 .navigateIntroducePage{
@@ -10,4 +10,95 @@
 
 .reference{
     justify-content: left;
+}
+
+.cloud_introduce{
+    height: 100px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    display : flex;
+}
+
+.introduce_p {
+    padding-top: 100px;
+}
+
+.introduce_aws {
+    height : 100px;
+    width : 300px;
+    background-image: url(../img/AWSCloudimg.png);
+    background-size: 140px;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.introduce_naver {
+    height : 100px;
+    width : 240px;
+    background-image: url(../img/NCloudimg.jpeg);
+    background-size: 140px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.introduce_gcp {
+    height : 100px;
+    width : 240px;
+    background-image: url(../img/GCPCloudimg.png);
+    background-size: 140px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.introduce_micro {
+    height : 100px;
+    width : 240px;
+    background-image: url(../img/MICloudimg.png);
+    background-size: 140px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.introduce_samsung{
+    height : 100px;
+    width : 240px;
+    background-image: url(../img/SAMCloudimg.jpg);
+    background-size: 140px; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.add_coment {
+    margin-top: 20px;
+    display : flex;
+    display: grid;
+    padding-bottom: 60px;
+}
+
+.creater {
+    display: flex;
+    padding-left: 30px;
+}
+
+.github {
+    display: flex;
+    padding-left: 30px;
+}
+
+.develops {
+    display: flex;
+    padding-left: 30px;
+}
+
+.navigateIntroducePage {
+    color: white;
+    background-color:transparent;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.introduce_footerbar{
+    background: linear-gradient(#a674f2, #6205E9);
 }
