@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Carousel from 'react-bootstrap/Carousel';
-import titleImg from './img/pngegg.png';
-
+import { Carousel, Col, Row } from "react-bootstrap";
+import AWSImage from "./img/AWSCloudimg.png";
+import GoogleImage from "./img/GCPCloudimg.png";
+import NCloudImage from "./img/NCloudimg.jpeg";
+import SamsungCloudImage from "./img/SAMCloudimg.jpg"
+import AzureImage from "./img/MICloudimg.png";
 
 function Introduce() {
     const navigate = useNavigate();
@@ -12,46 +14,44 @@ function Introduce() {
     }
 
     return (
-        <div>
-            <div className="introduce_slidercontentbar">
-                <Carousel>
+        <Container>
+            <Row>
+            <Col>
+                <Carousel slide="true">
                     <Carousel.Item>
-                        <div className='slidercontents_aws'>
-                            <div className='wrapText'>
-                                <a className="slidecontents_a" href="https://docs.aws.amazon.com/ko_kr/pricing-calculator/latest/userguide/getting-started.html">아마존 클라우드 보러가기</a>
-                            </div>
-                        </div>
+                        <img className="d-block w-100" src={AWSImage}></img>
+                        <Carousel.Caption>
+                            <a className="slidecontents_a" href="https://docs.aws.amazon.com/ko_kr/pricing-calculator/latest/userguide/getting-started.html">
+                                아마존 클라우드 보러가기
+                            </a>
+                        </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <div className='slidercontents_ncloud'>
-                            <div className='wrapText'>
-                                <a className="slidecontents_a" href="https://www.ncloud.com/charge/calc/ko">네이버 클라우드 보러가기</a>
-                            </div>
-                        </div>
+                        <img className="d-block w-100" src={NCloudImage} ></img>
+                        <Carousel.Caption>
+                            <a className="slidecontents_a" href="https://www.ncloud.com/charge/calc/ko">
+                                네이버 클라우드 보러가기
+                            </a>
+                        </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <div className='slidercontents_gcpcloud'>
-                            <div className='wrapText'>
-                                <a className="slidecontents_a" href="https://cloud.google.com/products/calculator?hl=ko">구글 클라우드 보러가기</a>
-                            </div>
-                        </div>
+                        <img className="d-block w-100" src={GoogleImage} ></img>
+                        <Carousel.Caption>
+                            <a className="slidecontents_a" href="https://cloud.google.com/products/calculator?hl=ko">
+                                구글 클라우드 보러가기
+                            </a>
+                        </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <div className='slidercontents_micro'>
-                            <div className='wrapText'>
-                                <a className="slidecontents_a" href="https://azure.microsoft.com/ko-kr/pricing/">마이크로소프트 클라우드 보러가기</a>
-                            </div>
-                        </div>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <div className='slidercontents_samsung'>
-                            <div className='wrapText'>
-                                <a className="slidecontents_a" href="https://www.digitalmarket.kr/web/service/detail.do?s=IAS-4-02-10233">삼성 클라우드 보러가기</a>
-                            </div>
-                        </div>
+                        <img className="d-block w-100" src={SamsungCloudImage} ></img>
+                        <Carousel.Caption>
+                            <a className="slidecontents_a" href="https://www.digitalmarket.kr/web/service/detail.do?s=IAS-4-02-10233">
+                                삼성 클라우드 보러가기
+                            </a>
+                        </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
-            </div>
+            </Col>
             <div className="introduce_comentbar">
                 <h1 className="introduce_comentbar_h1">Why do I need cloud calculations?</h1>
                 <div className="introduce_comentbar_set">
@@ -76,7 +76,8 @@ function Introduce() {
                     클라우드 산정하러 가기
                 </button>
             </div>
-        </div>
+            </Row>
+        </Container>
     );
 }
 
