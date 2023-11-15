@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route, Routes} from 'react-router-dom';
 import IntroducePage from './IntroducePage';
 import ResultListPage from './ResultListPage';
