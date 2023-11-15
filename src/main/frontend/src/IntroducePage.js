@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import './IntroducePage.css';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Carousel from 'react-bootstrap/Carousel';
@@ -14,14 +13,6 @@ function Introduce() {
 
     return (
         <div>
-            <div className="introduce_headerbar" style={{textAlign:'lte'}}>
-                <Navbar className="bg-custom">
-                    <Container>
-                        <img style={{paddingLeft:'10px', paddingRight:'10px'}}src = {titleImg}/>
-                        <h1 style={{ color: '#ffffff', fontSize : '30px', paddingTop:'10px'}}>Team 올린엄지</h1>
-                    </Container>
-                </Navbar>
-            </div>
             <div className="introduce_slidercontentbar">
                 <Carousel>
                     <Carousel.Item>
@@ -81,7 +72,9 @@ function Introduce() {
                 </div>    
             </div>
             <div className="introduce_footerbar">
-                <button className="navigateResultPage" onClick={navigateToResultListPage}>클라우드 산정하러 가기</button>
+                <button className="navigateResultPage" onClick={navigateToResultListPage}>
+                    클라우드 산정하러 가기
+                </button>
             </div>
         </div>
     );

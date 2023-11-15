@@ -1,4 +1,3 @@
-import './IntroducePage.css';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import ContentList from "./component/ContentList";
@@ -15,8 +14,8 @@ function ResultListPage() {
                 <Navbar>
                     <Container>
                         <Navbar.Brand href="/" style={{ display:'flex' }}>
-                             <img style={{paddingLeft:'10px', paddingRight:'10px'}}src = {titleImg}/>
-                             <h1 style={{ color: '#ffffff', fontSize : '30px', paddingTop:'10px'}}>Team 올린엄지</h1>
+                             <img src = {titleImg}/>
+                             <h1>Team 올린엄지</h1>
                         </Navbar.Brand>
                     </Container>
                 </Navbar>

@@ -8,12 +8,12 @@ const MONTH = 30;
 let chart;
 
 // axios 이용해서 데이터 가져오기
-const axiosGetData = async() => {
-  const response = await axios.get("https://localhost:8080/api/")
-  console.log(response.data)
-}
+// const axiosGetData = async() => {
+//   const response = await axios.get("https://localhost:8080/api/")
+//   console.log(response.data)
+// }
 
-axiosGetData()
+// axiosGetData()
 // USD -> WON 변환
 jsonData.forEach((element) => {
   if (element["Currency exchange rates"] === "USD") {

@@ -1,5 +1,5 @@
-import './Footer.css';
-import '../IntroducePage.css';
+// import './Footer.css';
+// import '../IntroducePage.css';
 
 function Footer() {
 

@@ -1,4 +1,4 @@
-import './ContentList.css';
+// import './ContentList.css';
 
 function ContentList() {
     return (
