@@ -1,6 +1,6 @@
 export default [
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 2 Memory : 4GB",
   "I\/O": "DISK",
   "Type": "Standard",
@@ -8,10 +8,10 @@ export default [
   "Memory(GiB)": 4,
   "Currency exchange rates": "WON",
   "Cost per hour": 100,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 4 Memory : 8GB",
   "I\/O": "DISK",
   "Type": "Standard",
@@ -19,10 +19,10 @@ export default [
   "Memory(GiB)": 8,
   "Currency exchange rates": "WON",
   "Cost per hour": 200,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 8 Memory : 16GB",
   "I\/O": "DISK",
   "Type": "Standard",
@@ -30,10 +30,10 @@ export default [
   "Memory(GiB)": 16,
   "Currency exchange rates": "WON",
   "Cost per hour": 400,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 16 Memory : 32GB",
   "I\/O": "DISK",
   "Type": "Standard",
@@ -41,10 +41,10 @@ export default [
   "Memory(GiB)": 32,
   "Currency exchange rates": "WON",
   "Cost per hour": 800,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 2 Memory : 8GB",
   "I\/O": "DISK",
   "Type": "Standard",
@@ -52,10 +52,10 @@ export default [
   "Memory(GiB)": 8,
   "Currency exchange rates": "WON",
   "Cost per hour": 123,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 4 Memory : 16GB",
   "I\/O": "DISK",
   "Type": "Standard",
@@ -63,10 +63,10 @@ export default [
   "Memory(GiB)": 16,
   "Currency exchange rates": "WON",
   "Cost per hour": 245,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 8 Memory : 32GB",
   "I\/O": "DISK",
   "Type": "Standard",
@@ -74,10 +74,10 @@ export default [
   "Memory(GiB)": 32,
   "Currency exchange rates": "WON",
   "Cost per hour": 489,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 2 Memory : 16GB",
   "I\/O": "DISK",
   "Type": "Standard",
@@ -85,10 +85,10 @@ export default [
   "Memory(GiB)": 16,
   "Currency exchange rates": "WON",
   "Cost per hour": 167,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 4 Memory : 32GB",
   "I\/O": "DISK",
   "Type": "Standard",
@@ -96,10 +96,10 @@ export default [
   "Memory(GiB)": 32,
   "Currency exchange rates": "WON",
   "Cost per hour": 334,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "High Memory DISK vCPU : 16 Memory : 64GB",
   "I\/O": "DISK",
   "Type": "High Memory",
@@ -107,10 +107,10 @@ export default [
   "Memory(GiB)": 64,
   "Currency exchange rates": "WON",
   "Cost per hour": 978,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "High Memory DISK vCPU : 32 Memory : 128GB",
   "I\/O": "DISK",
   "Type": "High Memory",
@@ -118,10 +118,10 @@ export default [
   "Memory(GiB)": 128,
   "Currency exchange rates": "WON",
   "Cost per hour": 1956,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "High Memory DISK vCPU : 8 Memory : 64GB",
   "I\/O": "DISK",
   "Type": "High Memory",
@@ -129,10 +129,10 @@ export default [
   "Memory(GiB)": 64,
   "Currency exchange rates": "WON",
   "Cost per hour": 667,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "High Memory DISK vCPU : 16 Memory : 128GB",
   "I\/O": "DISK",
   "Type": "High Memory",
@@ -140,10 +140,10 @@ export default [
   "Memory(GiB)": 128,
   "Currency exchange rates": "WON",
   "Cost per hour": 1334,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "High Memory DISK vCPU : 32 Memory : 256GB",
   "I\/O": "DISK",
   "Type": "High Memory",
@@ -151,10 +151,10 @@ export default [
   "Memory(GiB)": 256,
   "Currency exchange rates": "WON",
   "Cost per hour": 2667,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 4 Memory : 8GB",
   "I\/O": "SSD",
   "Type": "Standard",
@@ -162,10 +162,10 @@ export default [
   "Memory(GiB)": 8,
   "Currency exchange rates": "WON",
   "Cost per hour": 208,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 8 Memory : 16GB",
   "I\/O": "SSD",
   "Type": "Standard",
@@ -173,10 +173,10 @@ export default [
   "Memory(GiB)": 16,
   "Currency exchange rates": "WON",
   "Cost per hour": 408,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 16 Memory : 32GB",
   "I\/O": "SSD",
   "Type": "Standard",
@@ -184,10 +184,10 @@ export default [
   "Memory(GiB)": 32,
   "Currency exchange rates": "WON",
   "Cost per hour": 808,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 2 Memory : 8GB",
   "I\/O": "SSD",
   "Type": "Standard",
@@ -195,10 +195,10 @@ export default [
   "Memory(GiB)": 8,
   "Currency exchange rates": "WON",
   "Cost per hour": 131,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 4 Memory : 16GB",
   "I\/O": "SSD",
   "Type": "Standard",
@@ -206,10 +206,10 @@ export default [
   "Memory(GiB)": 16,
   "Currency exchange rates": "WON",
   "Cost per hour": 253,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 8 Memory : 32GB",
   "I\/O": "SSD",
   "Type": "Standard",
@@ -217,10 +217,10 @@ export default [
   "Memory(GiB)": 32,
   "Currency exchange rates": "WON",
   "Cost per hour": 497,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 2 Memory : 16GB",
   "I\/O": "SSD",
   "Type": "Standard",
@@ -228,10 +228,10 @@ export default [
   "Memory(GiB)": 16,
   "Currency exchange rates": "WON",
   "Cost per hour": 175,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 4 Memory : 32GB",
   "I\/O": "SSD",
   "Type": "Standard",
@@ -239,10 +239,10 @@ export default [
   "Memory(GiB)": 32,
   "Currency exchange rates": "WON",
   "Cost per hour": 342,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "High Memory SSD vCPU : 16 Memory : 64GB",
   "I\/O": "SSD",
   "Type": "High Memory",
@@ -250,10 +250,10 @@ export default [
   "Memory(GiB)": 64,
   "Currency exchange rates": "WON",
   "Cost per hour": 986,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "High Memory SSD vCPU : 32 Memory : 128GB",
   "I\/O": "SSD",
   "Type": "High Memory",
@@ -261,10 +261,10 @@ export default [
   "Memory(GiB)": 128,
   "Currency exchange rates": "WON",
   "Cost per hour": 1964,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "High Memory SSD vCPU : 8 Memory : 64GB",
   "I\/O": "SSD",
   "Type": "High Memory",
@@ -272,10 +272,10 @@ export default [
   "Memory(GiB)": 64,
   "Currency exchange rates": "WON",
   "Cost per hour": 675,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "High Memory SSD vCPU : 16 Memory : 128GB",
   "I\/O": "SSD",
   "Type": "High Memory",
@@ -283,10 +283,10 @@ export default [
   "Memory(GiB)": 128,
   "Currency exchange rates": "WON",
   "Cost per hour": 1342,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
-  "Vender": "Naver Clould",
+  "Vender": "Naver Cloud",
   "Name": "High Memory SSD vCPU : 32 Memory : 256GB",
   "I\/O": "SSD",
   "Type": "High Memory",
@@ -294,7 +294,7 @@ export default [
   "Memory(GiB)": 256,
   "Currency exchange rates": "WON",
   "Cost per hour": 2675,
-  "etc": "Naver Clould의 메모리 크기는 GB 단위입니다."
+  "etc": "Naver Cloud의 메모리 크기는 GB 단위입니다."
  },
  {
   "Vender": "AWS",
