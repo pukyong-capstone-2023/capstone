@@ -4,6 +4,7 @@ import AddContent from './component/AddContent';
 import Footer from './component/Footer';
 import ChartComponent from './component/ChartComponent.js';
 import data from './data'
+import { useState } from 'react';
 
 function ResultListPage() {
 
@@ -11,9 +12,16 @@ function ResultListPage() {
     const vcpus = getVcpus();
     const memories = getMemories();
 
+    const [filter, setFilter] = useState({clouds:[], vcpu:0, memory:0, month:0});
+
     return (
         <Container>
-            <ContentList clouds={clouds} vcpus={vcpus} memories={memories} />
+            <ContentList>
+                <ContentList.SelectClouds clouds={clouds} />
+                <ContentList.SelectMonth />
+                <ContentList.SelectCPU vcpus={vcpus} />
+                <ContentList.SelectMemory memories={memories} />
+            </ContentList>
             <ChartComponent />
             <AddContent />
             <Footer />
@@ -22,16 +30,21 @@ function ResultListPage() {
 
 
     function getMemories() {
-        return data
-                .map(a => a['Memory(GiB)'])
-                .filter((cloud, idx, arr) => arr.indexOf(cloud) === idx)
-                .sort((a, b) => a - b);
+        const memories = data
+                .map(instance => instance['Memory(GiB)'])
+                .filter((cloud, idx, arr) => arr.indexOf(cloud) === idx);
+        memories.push(0);
+        memories.sort((a,b) => a - b);
+        return memories;
     }
 
     function getVcpus() {
-        return data.map(instance => instance.vCPU)
+        const vcpus =  data.map(instance => instance.vCPU)
                 .filter((cloud, idx, arr) => arr.indexOf(cloud) === idx)
                 .sort((a, b) => a - b);
+        vcpus.push(0);
+        vcpus.sort((a,b) => a - b);
+        return vcpus;
     }
 
     function getClouds() {
