@@ -12,12 +12,21 @@ function ResultListPage() {
     const vcpus = getVcpus();
     const memories = getMemories();
 
-    const [filter, setFilter] = useState({clouds:[], vcpu:0, memory:0, month:0});
+    const [selectedClouds, setSelectedClouds] = useState([]);
+
+    const toggleCloud = cloud => {
+        if(selectedClouds.includes(cloud)) {
+            setSelectedClouds(selectedClouds.filter((selectedCloud) => selectedCloud !== cloud));
+        }
+        else {
+            setSelectedClouds([...selectedClouds, cloud]);
+        }
+    }
 
     return (
         <Container>
             <ContentList>
-                <ContentList.SelectClouds clouds={clouds} />
+                <ContentList.SelectClouds clouds={clouds} toggleCloud={toggleCloud} />
                 <ContentList.SelectMonth />
                 <ContentList.SelectCPU vcpus={vcpus} />
                 <ContentList.SelectMemory memories={memories} />

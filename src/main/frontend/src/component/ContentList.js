@@ -12,12 +12,13 @@ function ContentList({children}) {
 export default ContentList;
 
 
-ContentList.SelectClouds = ({clouds}) => {
+ContentList.SelectClouds = ({clouds, toggleCloud}) => {
+
     return (
         <div className="col-3">
             <h3>Cloud 선택</h3>
             {clouds.map((cloud, idx) => (
-                <label id={idx}>{cloud}<input type="checkbox"/></label>
+                <label id={idx}><input type="checkbox" onChange={() => toggleCloud(cloud)}/>{cloud}</label>
             ))}
         </div>
     );
