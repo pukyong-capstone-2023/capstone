@@ -2,7 +2,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 2 Memory : 4GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "Standard",
   "vCPU": 2,
   "Memory(GiB)": 4,
@@ -13,7 +13,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 4 Memory : 8GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "Standard",
   "vCPU": 4,
   "Memory(GiB)": 8,
@@ -24,7 +24,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 8 Memory : 16GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "Standard",
   "vCPU": 8,
   "Memory(GiB)": 16,
@@ -35,7 +35,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 16 Memory : 32GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "Standard",
   "vCPU": 16,
   "Memory(GiB)": 32,
@@ -46,7 +46,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 2 Memory : 8GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "Standard",
   "vCPU": 2,
   "Memory(GiB)": 8,
@@ -57,7 +57,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 4 Memory : 16GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "Standard",
   "vCPU": 4,
   "Memory(GiB)": 16,
@@ -68,7 +68,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 8 Memory : 32GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "Standard",
   "vCPU": 8,
   "Memory(GiB)": 32,
@@ -79,7 +79,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 2 Memory : 16GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "Standard",
   "vCPU": 2,
   "Memory(GiB)": 16,
@@ -90,7 +90,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard DISK vCPU : 4 Memory : 32GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "Standard",
   "vCPU": 4,
   "Memory(GiB)": 32,
@@ -101,7 +101,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "High Memory DISK vCPU : 16 Memory : 64GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "High Memory",
   "vCPU": 16,
   "Memory(GiB)": 64,
@@ -112,7 +112,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "High Memory DISK vCPU : 32 Memory : 128GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "High Memory",
   "vCPU": 32,
   "Memory(GiB)": 128,
@@ -123,7 +123,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "High Memory DISK vCPU : 8 Memory : 64GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "High Memory",
   "vCPU": 8,
   "Memory(GiB)": 64,
@@ -134,7 +134,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "High Memory DISK vCPU : 16 Memory : 128GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "High Memory",
   "vCPU": 16,
   "Memory(GiB)": 128,
@@ -145,7 +145,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "High Memory DISK vCPU : 32 Memory : 256GB",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "High Memory",
   "vCPU": 32,
   "Memory(GiB)": 256,
@@ -156,7 +156,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 4 Memory : 8GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "Standard",
   "vCPU": 4,
   "Memory(GiB)": 8,
@@ -167,7 +167,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 8 Memory : 16GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "Standard",
   "vCPU": 8,
   "Memory(GiB)": 16,
@@ -178,7 +178,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 16 Memory : 32GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "Standard",
   "vCPU": 16,
   "Memory(GiB)": 32,
@@ -189,7 +189,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 2 Memory : 8GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "Standard",
   "vCPU": 2,
   "Memory(GiB)": 8,
@@ -200,7 +200,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 4 Memory : 16GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "Standard",
   "vCPU": 4,
   "Memory(GiB)": 16,
@@ -211,7 +211,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 8 Memory : 32GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "Standard",
   "vCPU": 8,
   "Memory(GiB)": 32,
@@ -222,7 +222,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 2 Memory : 16GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "Standard",
   "vCPU": 2,
   "Memory(GiB)": 16,
@@ -233,7 +233,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "Standard SSD vCPU : 4 Memory : 32GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "Standard",
   "vCPU": 4,
   "Memory(GiB)": 32,
@@ -244,7 +244,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "High Memory SSD vCPU : 16 Memory : 64GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "High Memory",
   "vCPU": 16,
   "Memory(GiB)": 64,
@@ -255,7 +255,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "High Memory SSD vCPU : 32 Memory : 128GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "High Memory",
   "vCPU": 32,
   "Memory(GiB)": 128,
@@ -266,7 +266,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "High Memory SSD vCPU : 8 Memory : 64GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "High Memory",
   "vCPU": 8,
   "Memory(GiB)": 64,
@@ -277,7 +277,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "High Memory SSD vCPU : 16 Memory : 128GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "High Memory",
   "vCPU": 16,
   "Memory(GiB)": 128,
@@ -288,7 +288,7 @@ export default [
  {
   "Vender": "Naver Cloud",
   "Name": "High Memory SSD vCPU : 32 Memory : 256GB",
-  "I\/O": "SSD",
+  "I/O": "SSD",
   "Type": "High Memory",
   "vCPU": 32,
   "Memory(GiB)": 256,
@@ -299,7 +299,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6i.12xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 48,
   "Memory(GiB)": 192,
@@ -310,7 +310,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5a.large",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 2,
   "Memory(GiB)": 8,
@@ -321,7 +321,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5zn.6xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 24,
   "Memory(GiB)": 96,
@@ -332,7 +332,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5zn.metal",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 48,
   "Memory(GiB)": 192,
@@ -343,7 +343,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6i.metal",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 128,
   "Memory(GiB)": 512,
@@ -354,7 +354,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "t3.large",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 2,
   "Memory(GiB)": 8,
@@ -365,7 +365,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m4.16xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 64,
   "Memory(GiB)": 256,
@@ -376,7 +376,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "t3.nano",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 2,
   "Memory(GiB)": 0.5,
@@ -387,7 +387,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6i.8xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 32,
   "Memory(GiB)": 128,
@@ -398,7 +398,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6g.16xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 64,
   "Memory(GiB)": 256,
@@ -409,7 +409,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6i.4xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 16,
   "Memory(GiB)": 64,
@@ -420,7 +420,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5zn.2xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 8,
   "Memory(GiB)": 32,
@@ -431,7 +431,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m4.4xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 16,
   "Memory(GiB)": 64,
@@ -442,7 +442,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5zn.12xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 48,
   "Memory(GiB)": 192,
@@ -453,7 +453,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6i.16xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 64,
   "Memory(GiB)": 256,
@@ -464,7 +464,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5.2xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 8,
   "Memory(GiB)": 32,
@@ -475,7 +475,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6i.32xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 128,
   "Memory(GiB)": 512,
@@ -486,7 +486,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "t3.micro",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 2,
   "Memory(GiB)": 1,
@@ -497,7 +497,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6i.xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 4,
   "Memory(GiB)": 16,
@@ -508,7 +508,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5zn.3xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 12,
   "Memory(GiB)": 48,
@@ -519,7 +519,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6g.2xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 8,
   "Memory(GiB)": 32,
@@ -530,7 +530,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5.large",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 2,
   "Memory(GiB)": 8,
@@ -541,7 +541,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5.24xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 96,
   "Memory(GiB)": 384,
@@ -552,7 +552,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5a.4xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 16,
   "Memory(GiB)": 64,
@@ -563,7 +563,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5.4xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 16,
   "Memory(GiB)": 64,
@@ -574,7 +574,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m4.large",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 2,
   "Memory(GiB)": 8,
@@ -585,7 +585,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6g.8xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 32,
   "Memory(GiB)": 128,
@@ -596,7 +596,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5a.12xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 48,
   "Memory(GiB)": 192,
@@ -607,7 +607,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5.12xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 48,
   "Memory(GiB)": 192,
@@ -618,7 +618,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5a.2xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 8,
   "Memory(GiB)": 32,
@@ -629,7 +629,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6g.12xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 48,
   "Memory(GiB)": 192,
@@ -640,7 +640,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m4.10xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 40,
   "Memory(GiB)": 160,
@@ -651,7 +651,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "t3.medium",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 2,
   "Memory(GiB)": 4,
@@ -662,7 +662,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6i.large",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 2,
   "Memory(GiB)": 8,
@@ -673,7 +673,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5.16xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 64,
   "Memory(GiB)": 256,
@@ -684,7 +684,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5.8xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 32,
   "Memory(GiB)": 128,
@@ -695,7 +695,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5.xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 4,
   "Memory(GiB)": 16,
@@ -706,7 +706,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6i.2xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 8,
   "Memory(GiB)": 32,
@@ -717,7 +717,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5a.8xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 32,
   "Memory(GiB)": 128,
@@ -728,7 +728,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m4.2xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 8,
   "Memory(GiB)": 32,
@@ -739,7 +739,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5zn.large",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 2,
   "Memory(GiB)": 8,
@@ -750,7 +750,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6g.medium",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 1,
   "Memory(GiB)": 4,
@@ -761,7 +761,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "t3.2xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 8,
   "Memory(GiB)": 32,
@@ -772,7 +772,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m4.xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 4,
   "Memory(GiB)": 16,
@@ -783,7 +783,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "t3.small",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 2,
   "Memory(GiB)": 2,
@@ -794,7 +794,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6g.large",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 2,
   "Memory(GiB)": 8,
@@ -805,7 +805,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5a.16xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 64,
   "Memory(GiB)": 256,
@@ -816,7 +816,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5zn.xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 4,
   "Memory(GiB)": 16,
@@ -827,7 +827,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6g.metal",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 64,
   "Memory(GiB)": 256,
@@ -838,7 +838,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6g.xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 4,
   "Memory(GiB)": 16,
@@ -849,7 +849,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5a.xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 4,
   "Memory(GiB)": 16,
@@ -860,7 +860,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "t3.xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 4,
   "Memory(GiB)": 16,
@@ -871,7 +871,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5.metal",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 96,
   "Memory(GiB)": 384,
@@ -882,7 +882,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6i.24xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 96,
   "Memory(GiB)": 384,
@@ -893,7 +893,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m5a.24xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 96,
   "Memory(GiB)": 384,
@@ -904,7 +904,7 @@ export default [
  {
   "Vender": "AWS",
   "Name": "m6g.4xlarge",
-  "I\/O": "DISK",
+  "I/O": "DISK",
   "Type": "EBS 전용",
   "vCPU": 16,
   "Memory(GiB)": 64,
@@ -915,7 +915,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-standard-1",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 1,
   "Memory(GiB)": 3.75,
@@ -925,7 +925,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-standard-2",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 2,
   "Memory(GiB)": 7.5,
@@ -935,7 +935,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-standard-4",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 4,
   "Memory(GiB)": 15,
@@ -945,7 +945,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-standard-8",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 8,
   "Memory(GiB)": 30,
@@ -955,7 +955,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-standard-16",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 16,
   "Memory(GiB)": 60,
@@ -965,7 +965,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-standard-32",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 32,
   "Memory(GiB)": 120,
@@ -975,7 +975,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-standard-64",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 64,
   "Memory(GiB)": 240,
@@ -985,7 +985,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-standard-96",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 96,
   "Memory(GiB)": 360,
@@ -995,7 +995,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highmem-2",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 2,
   "Memory(GiB)": 13,
@@ -1005,7 +1005,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highmem-4",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 4,
   "Memory(GiB)": 26,
@@ -1015,7 +1015,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highmem-8",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 8,
   "Memory(GiB)": 52,
@@ -1025,7 +1025,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highmem-16",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 16,
   "Memory(GiB)": 104,
@@ -1035,7 +1035,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highmem-32",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 32,
   "Memory(GiB)": 208,
@@ -1045,7 +1045,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highmem-64",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 64,
   "Memory(GiB)": 416,
@@ -1055,7 +1055,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highmem-96",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 96,
   "Memory(GiB)": 624,
@@ -1065,7 +1065,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highcpu-2",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 2,
   "Memory(GiB)": 1.8,
@@ -1075,7 +1075,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highcpu-4",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 4,
   "Memory(GiB)": 3.6,
@@ -1085,7 +1085,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highcpu-8",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 8,
   "Memory(GiB)": 7.2,
@@ -1095,7 +1095,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "N1-highcpu-16",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 16,
   "Memory(GiB)": 14.4,
@@ -1105,7 +1105,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highcpu-32",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 32,
   "Memory(GiB)": 28.8,
@@ -1115,7 +1115,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highcpu-64",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 64,
   "Memory(GiB)": 57.6,
@@ -1125,7 +1125,7 @@ export default [
  {
   "Vender": "GCP",
   "Name": "n1-highcpu-96",
-  "I\/O": "OPTIONAL",
+  "I/O": "OPTIONAL",
   "Type": "N1",
   "vCPU": 96,
   "Memory(GiB)": 86.4,
