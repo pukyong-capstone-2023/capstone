@@ -39,8 +39,7 @@ function ResultListPage() {
 
 
     function getMemories() {
-        const memories = data
-                .map(instance => instance['Memory(GiB)'])
+        const memories = data.map(instance => instance['Memory(GiB)'])
                 .filter((cloud, idx, arr) => arr.indexOf(cloud) === idx);
         memories.push(0);
         memories.sort((a,b) => a - b);
@@ -50,7 +49,6 @@ function ResultListPage() {
     function getVcpus() {
         const vcpus =  data.map(instance => instance.vCPU)
                 .filter((cloud, idx, arr) => arr.indexOf(cloud) === idx)
-                .sort((a, b) => a - b);
         vcpus.push(0);
         vcpus.sort((a,b) => a - b);
         return vcpus;
