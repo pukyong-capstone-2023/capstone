@@ -1,10 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import ContentList from "./component/ContentList";
-import Chart from './component/Chart';
 import AddContent from './component/AddContent';
 import Footer from './component/Footer';
-import jsonData from "./data.js";
-import setState from 'react'
+import ChartComponent from './component/ChartComponent.js';
 
 function ResultListPage() {
 
@@ -15,7 +13,7 @@ function ResultListPage() {
     return (
         <Container>
             <ContentList clouds={clouds} vcpus={vcpus} memories={memories} />
-            <Chart />
+            <ChartComponent />
             <AddContent />
             <Footer />
         </Container>

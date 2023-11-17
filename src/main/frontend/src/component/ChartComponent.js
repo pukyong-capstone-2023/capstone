@@ -1,11 +1,8 @@
-import { useEffect } from 'react';
-import main from '../main';
+import data from '../data'
 
 function ChartComponent() {
 
-    useEffect(() => {
-        main();
-    })
+    console.log(data)
 
     return(
         <>
