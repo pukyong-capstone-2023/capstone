@@ -3,12 +3,13 @@ import ContentList from "./component/ContentList";
 import AddContent from './component/AddContent';
 import Footer from './component/Footer';
 import ChartComponent from './component/ChartComponent.js';
+import data from './data'
 
 function ResultListPage() {
 
-    const clouds = ["AWS", "NCloud", "GCP"]
-    const vcpus = [2,4,8,16,32,64]
-    const memories = [2,4,7,16,32,64]
+    const clouds = getClouds();
+    const vcpus = getVcpus();
+    const memories = getMemories();
 
     return (
         <Container>
@@ -19,6 +20,24 @@ function ResultListPage() {
         </Container>
     );
 
+
+    function getMemories() {
+        return data
+                .map(a => a['Memory(GiB)'])
+                .filter((cloud, idx, arr) => arr.indexOf(cloud) === idx)
+                .sort((a, b) => a - b);
+    }
+
+    function getVcpus() {
+        return data.map(instance => instance.vCPU)
+                .filter((cloud, idx, arr) => arr.indexOf(cloud) === idx)
+                .sort((a, b) => a - b);
+    }
+
+    function getClouds() {
+        return data.map(instance => instance.Vender)
+                .filter((cloud, idx, arr) => arr.indexOf(cloud) === idx);
+    }
 };
 
 
