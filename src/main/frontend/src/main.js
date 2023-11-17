@@ -1,5 +1,4 @@
 import jsonData from "./data.js";
-import axios from "axios";
 import { Chart } from "chart.js/auto";
 
 export default function main() {
@@ -35,41 +34,41 @@ let fixedPeriod = -1;
 let fixedList = ["AWS", "GCP", "Naver Clould"];
 
 function condition(element) {
-  if (fixedList.length == 0) {
+  if (fixedList.length === 0) {
     return false;
   }
 
-  if (fixedMemory == -1 && fixedVCpu == -1) {
+  if (fixedMemory === -1 && fixedVCpu === -1) {
     return fixedList.includes(element["Vender"]);
   }
 
   console.log(element["Vender"]);
   console.log(fixedList.includes(element["Vender"]));
 
-  if (fixedMemory == -1 && fixedVCpu == -1) {
+  if (fixedMemory === -1 && fixedVCpu === -1) {
     return (
-      element["Memory(GiB)"] == fixedMemory &&
-      element["vCPU"] == fixedVCpu &&
+      element["Memory(GiB)"] === fixedMemory &&
+      element["vCPU"] === fixedVCpu &&
       fixedList.includes(element["Vender"])
     );
   }
 
-  if (fixedMemory == -1) {
+  if (fixedMemory === -1) {
     return (
-      element["vCPU"] == fixedVCpu && fixedList.includes(element["Vender"])
+      element["vCPU"] === fixedVCpu && fixedList.includes(element["Vender"])
     );
   }
 
-  if (fixedVCpu == -1) {
+  if (fixedVCpu === -1) {
     return (
-      element["Memory(GiB)"] == fixedMemory &&
+      element["Memory(GiB)"] === fixedMemory &&
       fixedList.includes(element["Vender"])
     );
   }
 
   return (
-    element["Memory(GiB)"] == fixedMemory &&
-    element["vCPU"] == fixedVCpu &&
+    element["Memory(GiB)"] === fixedMemory &&
+    element["vCPU"] === fixedVCpu &&
     fixedList.includes(element["Vender"])
   );
 }
@@ -77,7 +76,7 @@ function condition(element) {
 makeChart();
 
 function makeChart() {
-  if (fixedPeriod == -1) {
+  if (fixedPeriod === -1) {
     makeLineChart();
   } else {
     makeBarChart();
@@ -123,7 +122,7 @@ function makeLineChart() {
     data: data,
   };
 
-  if (chart == null) {
+  if (chart === null) {
     chart = new Chart(ctx, config);
   } else {
     chart.destroy();
@@ -166,7 +165,7 @@ function makeBarChart() {
     },
   };
 
-  if (chart == null) {
+  if (chart === null) {
     chart = new Chart(ctx, config);
   } else {
     chart.destroy();
@@ -201,7 +200,7 @@ periodButton.addEventListener("click", function () {
     return;
   }
 
-  if (period.value == 0) {
+  if (period.value === 0) {
     fixedPeriod = -1;
   } else {
     fixedPeriod = period.value;
