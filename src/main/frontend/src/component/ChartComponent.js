@@ -2,7 +2,7 @@ import data from '../data'
 
 function ChartComponent() {
 
-    console.log(data)
+    // console.log(data)
 
     return(
         <>
