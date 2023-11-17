@@ -4,100 +4,67 @@ function ContentList() {
     return (
         <div className="content-header">
             <div className="selections">
-                <div className="content_options">
-                    <div className="selections_content">
-                        <h3 className="selections_h3">Cloud 선택</h3>
-                    </div> 
-                    <div className="selections_option">
-                        <label className="selection">AWS
-                            <input className="selection_check" type="checkbox" name="cloud" value="AWS" checked="true" />
-                        </label>
-                        <label className="selection">NCloud
-                            <input className="selection_check" type="checkbox" name="cloud" value="Naver Clould" checked="true" />
-                        </label>
-                        <label className="selection">GCP
-                            <input className="selection_check" type="checkbox" name="cloud" value="GCP" checked="true" />
-                        </label>
-                    </div>
-                </div>
-                <div className="content_options">
-                    <div className="selections_content">
-                        <h3 className="selections_h3">기간</h3>
-                    </div>
-                    <div className="selections_option">
-                        <label style={{ color: '#8A2AEF', alignItems: 'center', justifyContent: 'center' }}>
-                            사용기간
-                            <div style={{paddingTop:'20px', paddingBottom:'20px'}}>
-                                <input id="period" type="text" value={0} style={{ paddingRight:'20px',width: '90px', border: '2px #8A2AEF solid', borderRadius: '10px 10px 10px 10px' }} />
-                                <button id="period-btn" style={{ width : '70px', color : '#ffffff', backgroundColor: '#8A2AEF', border: '2px  solid', borderRadius: '10px 10px 10px 10px' }}>설정</button>
-                            </div>
-                        </label>
-                        <p style={{ color: '#8A2AEF' }}>** 기준은 달 입니다! **</p>
-                    </div>
-                </div>
-                <div className="content_options">
-                    <div className="selections_content">
-                        <h3 className="selections_h3">CPU 선택</h3>
-                    </div>
-                    <div className="selections_option">
-                        <label id="vcpu" style={{ borderRadius: '10px 10px 10px 10px', paddingBottom: '20px', display: 'grid' }}>
-                            <label className="selection">default
-                                <input className="selection_check" type="checkbox" value="-1" checked="true" />
-                            </label>
-                            <label className="selection">2 count
-                                <input className="selection_check" type="checkbox" value="2" checked="true" />
-                            </label>
-                            <label className="selection">4 count
-                                <input className="selection_check" type="checkbox" value="4" checked="true" />
-                            </label>
-                            <label className="selection">8 count
-                                <input className="selection_check" type="checkbox" value="8" checked="true" />
-                            </label>
-                            <label className="selection">16 count
-                                <input className="selection_check" type="checkbox" value="16" checked="true" />
-                            </label>
-                            <label className="selection">32 count
-                                <input className="selection_check" type="checkbox" value="32" checked="true" />
-                            </label>
-                            <label className="selection">64 count
-                                <input className="selection_check" type="checkbox" value="64" checked="true" />
-                            </label>
-                        </label>
-                    </div>
-                </div>
-                <div className="content_options">
-                    <div className="selections_content">
-                        <h3 className="selections_h3">MEMORY 선택</h3>
-                    </div>
-                    <div className="selections_option">
-                        <label id="memory" style={{ borderRadius: '10px 10px 10px 10px', paddingBottom: '20px', display: 'grid' }}>
-                            <label className="selection">default
-                                <input className="selection_check" type="checkbox" value="-1" checked="true" />
-                            </label>
-                            <label className="selection">2 GiB(or GB)
-                                <input className="selection_check" type="checkbox" value="2" checked="true" />
-                            </label>
-                            <label className="selection">4 GiB(or GB)
-                                <input className="selection_check" type="checkbox" value="4" checked="true" />
-                            </label>
-                            <label className="selection">8 GiB(or GB)
-                                <input className="selection_check" type="checkbox" value="8" checked="true" />
-                            </label>
-                            <label className="selection">16 GiB(or GB)
-                                <input className="selection_check" type="checkbox" value="16" checked="true" />
-                            </label>
-                            <label className="selection">32 GiB(or GB)
-                                <input className="selection_check" type="checkbox" value="32" checked="true" />
-                            </label>
-                            <label className="selection">64 GiB(or GB)
-                                <input className="selection_check" type="checkbox" value="64" checked="true" />
-                            </label>
-                        </label>
-                    </div>
-                </div>
+                <SelectClouds clouds={["AWS", "NCloud", "GCP"]} />
+                <SelectMonth />
+                <SelectCPU vcpus={[2,4,8,16,32,64]} />
+                <SelectMemory memoryTypes={[2,4,7,16,32,64]}/>
             </div>
         </div>
     );
 };
 
 export default ContentList;
+
+
+function SelectCPU({vcpus}) {
+    return (
+        <div>
+            <h3>CPU 선택</h3>
+            <select>
+                    {vcpus.map((vcpu, idx) => (
+                        <option id={idx}>{vcpu}</option>
+                    ))}
+            </select>
+        </div>
+    );
+}
+
+function SelectMemory({memoryTypes}) {
+    return (
+        <div>
+            <h3>MEMORY 선택</h3>
+            <select>
+                {memoryTypes.map((memoryType, idx) => (
+                    <option id={idx}>{memoryType}GiB(GB)</option>
+                ))}
+            </select>
+        </div>
+    );
+}
+
+function SelectMonth() {
+    return (
+        <div>
+            <h3>기간</h3>
+            <label>
+                사용기간
+                <div>
+                    <input id="period" type="text" value={0}/>
+                    <button id="period-btn">설정</button>
+                </div>
+            </label>
+            <p>** 기준은 달 입니다! **</p>
+        </div>
+    );
+}
+
+function SelectClouds({clouds}) {
+    return (
+        <div>
+            <h3>Cloud 선택</h3>
+            {clouds.map((cloud, idx) => (
+                <label id={idx}>{cloud}<input type="checkbox"/></label>
+            ))}
+        </div>
+    );
+}
