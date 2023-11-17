@@ -1,13 +1,13 @@
 // import './ContentList.css';
 
-function ContentList() {
+function ContentList({clouds, vcpus, memories}) {
     return (
         <div className="col">
             <div className="row">
-                <SelectClouds clouds={["AWS", "NCloud", "GCP"]} />
+                <SelectClouds clouds={clouds}/>
                 <SelectMonth />
-                <SelectCPU vcpus={[2,4,8,16,32,64]} />
-                <SelectMemory memoryTypes={[2,4,7,16,32,64]}/>
+                <SelectCPU vcpus={vcpus}/>
+                <SelectMemory memories={memories}/>
             </div>
         </div>
     );
@@ -29,12 +29,12 @@ function SelectCPU({vcpus}) {
     );
 }
 
-function SelectMemory({memoryTypes}) {
+function SelectMemory({memories}) {
     return (
         <div className="col-3">
             <h3>MEMORY 선택</h3>
             <select>
-                {memoryTypes.map((memoryType, idx) => (
+                {memories.map((memoryType, idx) => (
                     <option id={idx}>{memoryType}GiB(GB)</option>
                 ))}
             </select>

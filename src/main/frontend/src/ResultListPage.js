@@ -8,11 +8,13 @@ import setState from 'react'
 
 function ResultListPage() {
 
-    
+    const clouds = ["AWS", "NCloud", "GCP"]
+    const vcpus = [2,4,8,16,32,64]
+    const memories = [2,4,7,16,32,64]
 
     return (
         <Container>
-            <ContentList />
+            <ContentList clouds={clouds} vcpus={vcpus} memories={memories} />
             <Chart />
             <AddContent />
             <Footer />
