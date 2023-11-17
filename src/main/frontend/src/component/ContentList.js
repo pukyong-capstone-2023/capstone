@@ -2,8 +2,8 @@
 
 function ContentList() {
     return (
-        <div className="content-header">
-            <div className="selections">
+        <div className="col">
+            <div className="row">
                 <SelectClouds clouds={["AWS", "NCloud", "GCP"]} />
                 <SelectMonth />
                 <SelectCPU vcpus={[2,4,8,16,32,64]} />
@@ -18,7 +18,7 @@ export default ContentList;
 
 function SelectCPU({vcpus}) {
     return (
-        <div>
+        <div className="col-3">
             <h3>CPU 선택</h3>
             <select>
                     {vcpus.map((vcpu, idx) => (
@@ -31,7 +31,7 @@ function SelectCPU({vcpus}) {
 
 function SelectMemory({memoryTypes}) {
     return (
-        <div>
+        <div className="col-3">
             <h3>MEMORY 선택</h3>
             <select>
                 {memoryTypes.map((memoryType, idx) => (
@@ -44,7 +44,7 @@ function SelectMemory({memoryTypes}) {
 
 function SelectMonth() {
     return (
-        <div>
+        <div className="col-3">
             <h3>기간</h3>
             <label>
                 사용기간
@@ -60,7 +60,7 @@ function SelectMonth() {
 
 function SelectClouds({clouds}) {
     return (
-        <div>
+        <div className="col-3">
             <h3>Cloud 선택</h3>
             {clouds.map((cloud, idx) => (
                 <label id={idx}>{cloud}<input type="checkbox"/></label>
