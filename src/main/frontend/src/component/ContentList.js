@@ -56,13 +56,18 @@ ContentList.SelectMonth = ({selectedMonth, setSelectedMonth}) => {
     );
 }
 
-ContentList.SelectCPU = ({vcpus}) => {
+ContentList.SelectCPU = ({vcpus, selectedVcpu, setSelectedVcpu}) => {
+
+    const update = (e) => {
+        setSelectedVcpu(e.target.value);
+    }
+
     return (
         <div className="col-3">
             <h3>CPU 선택</h3>
-            <select>
+            <select onChange={update} value={selectedVcpu}>
                     {vcpus.map((vcpu, idx) => (
-                        <option id={idx}>{vcpu}</option>
+                        <option id={idx} value={vcpu} >{vcpu}</option>
                     ))}
             </select>
         </div>

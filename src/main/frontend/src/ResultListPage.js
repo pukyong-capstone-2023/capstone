@@ -20,9 +20,20 @@ function ResultListPage() {
     return (
         <Container>
             <ContentList>
-                <ContentList.SelectClouds clouds={clouds} selectedClouds={selectedClouds} setSelectedClouds={setSelectedClouds} />
-                <ContentList.SelectMonth selectedMonth={selectedMonth} setSelectedMonth={setSelectedMonth} />
-                <ContentList.SelectCPU vcpus={vcpus} />
+                <ContentList.SelectClouds 
+                    clouds={clouds}
+                    selectedClouds={selectedClouds}
+                    setSelectedClouds={setSelectedClouds}
+                />
+                <ContentList.SelectMonth
+                    selectedMonth={selectedMonth}
+                    setSelectedMonth={setSelectedMonth}
+                />
+                <ContentList.SelectCPU
+                    vcpus={vcpus}
+                    selectedVcpu={selectedVcpu}
+                    setSelectedVcpu={setSelectedVcpu}
+                />
                 <ContentList.SelectMemory memories={memories} />
             </ContentList>
             <ChartComponent />
