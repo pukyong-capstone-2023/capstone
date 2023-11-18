@@ -24,15 +24,22 @@ ContentList.SelectClouds = ({clouds, toggleCloud}) => {
     );
 }
 
-ContentList.SelectMonth = () => {
+ContentList.SelectMonth = ({selectedMonth, setSelectedMonth}) => {
+
+    const update = (e) => {
+        let v = Number(e.target.value);
+        if(isNaN(v)) v = 0;
+        setSelectedMonth(v);
+    }
+
     return (
         <div className="col-3">
             <h3>기간</h3>
             <label>
                 사용기간
                 <div>
-                    <input id="period" type="text" value={0}/>
-                    <button id="period-btn">설정</button>
+                    <input type="text" value={selectedMonth} onChange={update} />
+                    <button>설정</button>
                 </div>
             </label>
             <p>** 기준은 달 입니다! **</p>

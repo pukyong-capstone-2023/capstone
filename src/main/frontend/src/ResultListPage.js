@@ -13,6 +13,9 @@ function ResultListPage() {
     const memories = getMemories();
 
     const [selectedClouds, setSelectedClouds] = useState([]);
+    const [selectedVcpu, setSelectedVcpu] = useState(0);
+    const [selectedMonth, setSelectedMonth] = useState(0);
+    const [selectedMemory, setSelectedMemory] = useState(0);
 
     const toggleCloud = cloud => {
         if(selectedClouds.includes(cloud)) {
@@ -23,11 +26,13 @@ function ResultListPage() {
         }
     }
 
+    
+
     return (
         <Container>
             <ContentList>
                 <ContentList.SelectClouds clouds={clouds} toggleCloud={toggleCloud} />
-                <ContentList.SelectMonth />
+                <ContentList.SelectMonth selectedMonth={selectedMonth} setSelectedMonth={setSelectedMonth} />
                 <ContentList.SelectCPU vcpus={vcpus} />
                 <ContentList.SelectMemory memories={memories} />
             </ContentList>
