@@ -18,14 +18,10 @@ function ResultListPage() {
     const [selectedMonth, setSelectedMonth] = useState(0);
     const [selectedMemory, setSelectedMemory] = useState(0);
 
-    console.log(selectedClouds, selectedVcpu, selectedMemory)
-
     const filteredData = data
             .filter(singleData => selectedClouds.includes(singleData.Vender))
             .filter(singleData => selectedVcpu === 0 || singleData.vCPU === selectedVcpu)
             .filter(singleData => selectedMemory === 0 || singleData['Memory(GiB)'] === selectedMemory);
-    
-    console.log(filteredData)
 
     return (
         <Container>
@@ -51,7 +47,7 @@ function ResultListPage() {
                         setSelectedMemory={setSelectedMemory}
                     />
                 </ContentList>
-                <ChartComponent />
+                <ChartComponent data={filteredData} />
                 <AddContent />
                 <Footer />
             </Row>
