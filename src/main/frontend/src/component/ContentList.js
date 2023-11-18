@@ -1,7 +1,7 @@
 
 function ContentList({children}) {
     return (
-        <div className="col">
+        <div className="col-12">
             <div className="row">
                 {children}
             </div>

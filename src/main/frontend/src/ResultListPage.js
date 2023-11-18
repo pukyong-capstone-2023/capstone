@@ -5,6 +5,7 @@ import Footer from './component/Footer';
 import ChartComponent from './component/ChartComponent.js';
 import data from './data'
 import { useState } from 'react';
+import { Row } from 'react-bootstrap';
 
 function ResultListPage() {
 
@@ -28,30 +29,32 @@ function ResultListPage() {
 
     return (
         <Container>
-            <ContentList>
-                <ContentList.SelectClouds 
-                    clouds={clouds}
-                    selectedClouds={selectedClouds}
-                    setSelectedClouds={setSelectedClouds}
-                />
-                <ContentList.SelectMonth
-                    selectedMonth={selectedMonth}
-                    setSelectedMonth={setSelectedMonth}
-                />
-                <ContentList.SelectCPU
-                    vcpus={vcpus}
-                    selectedVcpu={selectedVcpu}
-                    setSelectedVcpu={setSelectedVcpu}
-                />
-                <ContentList.SelectMemory
-                    memories={memories}
-                    selectedMemory={selectedMemory}
-                    setSelectedMemory={setSelectedMemory}
-                />
-            </ContentList>
-            <ChartComponent />
-            <AddContent />
-            <Footer />
+            <Row>
+                <ContentList>
+                    <ContentList.SelectClouds 
+                        clouds={clouds}
+                        selectedClouds={selectedClouds}
+                        setSelectedClouds={setSelectedClouds}
+                    />
+                    <ContentList.SelectMonth
+                        selectedMonth={selectedMonth}
+                        setSelectedMonth={setSelectedMonth}
+                    />
+                    <ContentList.SelectCPU
+                        vcpus={vcpus}
+                        selectedVcpu={selectedVcpu}
+                        setSelectedVcpu={setSelectedVcpu}
+                    />
+                    <ContentList.SelectMemory
+                        memories={memories}
+                        selectedMemory={selectedMemory}
+                        setSelectedMemory={setSelectedMemory}
+                    />
+                </ContentList>
+                <ChartComponent />
+                <AddContent />
+                <Footer />
+            </Row>
         </Container>
     );
 
