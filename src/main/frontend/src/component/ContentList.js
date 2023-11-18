@@ -37,8 +37,7 @@ ContentList.SelectClouds = ({clouds, selectedClouds, setSelectedClouds}) => {
 ContentList.SelectMonth = ({selectedMonth, setSelectedMonth}) => {
 
     const update = (e) => {
-        let v = Number(e.target.value);
-        if(isNaN(v)) v = 0;
+        const v = isNaN(Number(e.target.value)) ? 0 : Number(e.target.value);
         setSelectedMonth(v);
     }
 
@@ -61,7 +60,8 @@ ContentList.SelectMonth = ({selectedMonth, setSelectedMonth}) => {
 ContentList.SelectCPU = ({vcpus, selectedVcpu, setSelectedVcpu}) => {
 
     const update = (e) => {
-        setSelectedVcpu(e.target.value);
+        const v = Number(e.target.value);
+        setSelectedVcpu(v);
     }
 
     return (
@@ -80,7 +80,8 @@ ContentList.SelectCPU = ({vcpus, selectedVcpu, setSelectedVcpu}) => {
 ContentList.SelectMemory = ({memories, selectedMemory, setSelectedMemory}) => {
 
     const update = (e) => {
-        setSelectedMemory(e.target.value);
+        const v = Number(e.target.value);
+        setSelectedMemory(v);
     }
 
     return (
