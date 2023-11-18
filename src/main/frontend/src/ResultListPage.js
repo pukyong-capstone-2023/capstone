@@ -9,19 +9,19 @@ import { Row } from 'react-bootstrap';
 
 function ResultListPage() {
 
-    const clouds = getClouds();
-    const vcpus = getVcpus();
-    const memories = getMemories();
-
     const [selectedClouds, setSelectedClouds] = useState([]);
     const [selectedVcpu, setSelectedVcpu] = useState(0);
     const [selectedMonth, setSelectedMonth] = useState(0);
     const [selectedMemory, setSelectedMemory] = useState(0);
 
-    const filteredData = data
-            .filter(singleData => selectedClouds.includes(singleData.Vender))
+    const cloudFilteredData = data.filter(singleData => selectedClouds.includes(singleData.Vender))
+    const filteredData = cloudFilteredData
             .filter(singleData => selectedVcpu === 0 || singleData.vCPU === selectedVcpu)
             .filter(singleData => selectedMemory === 0 || singleData['Memory(GiB)'] === selectedMemory);
+    
+    const clouds = getClouds(data);
+    const vcpus = getVcpus(cloudFilteredData);
+    const memories = getMemories(cloudFilteredData);
 
     return (
         <Container>
@@ -55,7 +55,7 @@ function ResultListPage() {
     );
 
 
-    function getMemories() {
+    function getMemories(data) {
         const memories = data.map(instance => instance['Memory(GiB)'])
                 .filter((cloud, idx, arr) => arr.indexOf(cloud) === idx);
         memories.push(0);
@@ -63,7 +63,7 @@ function ResultListPage() {
         return memories;
     }
 
-    function getVcpus() {
+    function getVcpus(data) {
         const vcpus =  data.map(instance => instance.vCPU)
                 .filter((cloud, idx, arr) => arr.indexOf(cloud) === idx)
         vcpus.push(0);
@@ -71,7 +71,7 @@ function ResultListPage() {
         return vcpus;
     }
 
-    function getClouds() {
+    function getClouds(data) {
         return data.map(instance => instance.Vender)
                 .filter((cloud, idx, arr) => arr.indexOf(cloud) === idx);
     }
