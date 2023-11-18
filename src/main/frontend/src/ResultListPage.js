@@ -34,7 +34,11 @@ function ResultListPage() {
                     selectedVcpu={selectedVcpu}
                     setSelectedVcpu={setSelectedVcpu}
                 />
-                <ContentList.SelectMemory memories={memories} />
+                <ContentList.SelectMemory
+                    memories={memories}
+                    selectedMemory={selectedMemory}
+                    setSelectedMemory={setSelectedMemory}
+                />
             </ContentList>
             <ChartComponent />
             <AddContent />

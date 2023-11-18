@@ -31,6 +31,7 @@ ContentList.SelectClouds = ({clouds, selectedClouds, setSelectedClouds}) => {
             ))}
         </div>
     );
+
 }
 
 ContentList.SelectMonth = ({selectedMonth, setSelectedMonth}) => {
@@ -54,6 +55,7 @@ ContentList.SelectMonth = ({selectedMonth, setSelectedMonth}) => {
             <p>** 기준은 달 입니다! **</p>
         </div>
     );
+
 }
 
 ContentList.SelectCPU = ({vcpus, selectedVcpu, setSelectedVcpu}) => {
@@ -67,22 +69,29 @@ ContentList.SelectCPU = ({vcpus, selectedVcpu, setSelectedVcpu}) => {
             <h3>CPU 선택</h3>
             <select onChange={update} value={selectedVcpu}>
                     {vcpus.map((vcpu, idx) => (
-                        <option id={idx} value={vcpu} >{vcpu}</option>
+                        <option id={idx} value={vcpu}>{vcpu}</option>
                     ))}
             </select>
         </div>
     );
+
 }
 
-ContentList.SelectMemory = ({memories}) => {
+ContentList.SelectMemory = ({memories, selectedMemory, setSelectedMemory}) => {
+
+    const update = (e) => {
+        setSelectedMemory(e.target.value);
+    }
+
     return (
         <div className="col-3">
             <h3>MEMORY 선택</h3>
-            <select>
-                {memories.map((memoryType, idx) => (
-                    <option id={idx}>{memoryType}GiB(GB)</option>
+            <select onChange={update} value={selectedMemory}>
+                {memories.map((memory, idx) => (
+                    <option id={idx} value={memory}>{memory}GiB(GB)</option>
                 ))}
             </select>
         </div>
     );
+
 }
