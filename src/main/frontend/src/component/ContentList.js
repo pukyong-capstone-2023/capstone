@@ -12,7 +12,16 @@ function ContentList({children}) {
 export default ContentList;
 
 
-ContentList.SelectClouds = ({clouds, toggleCloud}) => {
+ContentList.SelectClouds = ({clouds, selectedClouds, setSelectedClouds}) => {
+
+    const toggleCloud = cloud => {
+        if(selectedClouds.includes(cloud)) {
+            setSelectedClouds(selectedClouds.filter((selectedCloud) => selectedCloud !== cloud));
+        }
+        else {
+            setSelectedClouds([...selectedClouds, cloud]);
+        }
+    }
 
     return (
         <div className="col-3">
