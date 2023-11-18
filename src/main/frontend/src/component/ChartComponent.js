@@ -3,40 +3,51 @@ import { Line } from 'react-chartjs-2';
 
 function ChartComponent({data}) {
 
-    console.log(data)
 
-    const mockup = {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    const wonData = convertUSDtoWON(data);
+    const lineData = buildLineData(wonData);
+
+    const scaffold = {
+        labels: Array.from({length: 12}, (_, i) => i + 1),
         datasets: [
-          {
-            type: 'line',
-            label: 'Dataset 1',
-            borderColor: 'rgb(54, 162, 235)',
-            borderWidth: 2,
-            data: [1, 2, 3, 4, 5],
-          },
-          {
-            type: 'bar',
-            label: 'Dataset 2',
-            backgroundColor: 'rgb(255, 99, 132)',
-            data: [1, 2, 3, 4, 5, 6],
-            borderColor: 'red',
-            borderWidth: 2,
-          },
-          {
-            type: 'bar',
-            label: 'Dataset 3',
-            backgroundColor: 'rgb(75, 192, 192)',
-            data: [1, 2, 3, 4, 5, 6],
-          },
+            ...lineData
         ],
-      };
+    };
+
+    console.log("mockup", scaffold)
 
     return(
         <div className='col-12'>
-            <Line data={mockup} />
+            <Line data={scaffold} />
         </div>
     );
 };
 
 export default ChartComponent;
+
+const convertUSDtoWON = (jsonData) => {
+    // USD -> WON 변환
+    return jsonData.map((element) => {
+        const newElement = {...element};
+        if (newElement["Currency exchange rates"] === "USD") {
+            newElement["Currency exchange rates"] = "WON";
+            newElement["Cost per hour"] = Math.round(Number(newElement["Cost per hour"]) * 1290.45
+        );
+        } else newElement["Cost per hour"] = Number(element["Cost per hour"]);
+        return newElement;
+    });
+}
+
+const buildLineData = (data) => {
+    return data.map(element => {
+        const ret = {
+            type: 'line',
+            label: element.Vender + " : " + element.Name,
+            borderColor: '#' + Math.floor(Math.random() * 16777215).toString(16),
+            borderWidth: 2,
+            data: [...Array(10).keys()].map((n) => element["Cost per hour"] * n * 30),
+        }
+        console.log(ret)
+        return ret
+    })
+}
