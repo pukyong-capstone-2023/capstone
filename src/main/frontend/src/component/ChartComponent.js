@@ -45,7 +45,7 @@ const buildLineData = (data) => {
             label: element.Vender + " : " + element.Name,
             borderColor: '#' + Math.floor(Math.random() * 16777215).toString(16),
             borderWidth: 2,
-            data: [...Array(10).keys()].map((n) => element["Cost per hour"] * n * 30),
+            data: [...Array(12).keys()].map((n) => element["Cost per hour"] * n * 30),
         }
         console.log(ret)
         return ret
