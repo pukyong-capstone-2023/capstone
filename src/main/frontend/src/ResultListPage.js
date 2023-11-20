@@ -47,7 +47,7 @@ function ResultListPage() {
                         setSelectedMemory={setSelectedMemory}
                     />
                 </ContentList>
-                <ChartComponent data={filteredData} />
+                <ChartComponent data={filteredData} month={selectedMonth} />
                 <RecommendedCloud data={filteredData} />
                 <AddContent />
             </Row>
