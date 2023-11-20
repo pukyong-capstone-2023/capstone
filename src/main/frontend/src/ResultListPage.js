@@ -1,11 +1,11 @@
 import Container from 'react-bootstrap/Container';
 import ContentList from "./component/ContentList";
 import AddContent from './component/AddContent';
-import Footer from './component/Footer';
 import ChartComponent from './component/ChartComponent.js';
 import data from './data'
 import { useState } from 'react';
 import { Row } from 'react-bootstrap';
+import RecommendedCloud from './component/RecommendedCloud.js';
 
 function ResultListPage() {
 
@@ -47,9 +47,9 @@ function ResultListPage() {
                         setSelectedMemory={setSelectedMemory}
                     />
                 </ContentList>
-                <ChartComponent data={filteredData} />
+                <ChartComponent data={filteredData} month={selectedMonth} />
+                <RecommendedCloud data={filteredData} />
                 <AddContent />
-                <Footer />
             </Row>
         </Container>
     );

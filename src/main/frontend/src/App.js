@@ -4,6 +4,7 @@ import {Route, Routes} from 'react-router-dom';
 import IntroducePage from './IntroducePage';
 import ResultListPage from './ResultListPage';
 import Header from './component/Header';
+import Footer from './component/Footer';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
                 <Route path='/' element={<IntroducePage /> } />
                 <Route path='/ResultListPage' element={<ResultListPage/> } />
             </Routes>
+            <Footer/>
         </div>
     );
 }

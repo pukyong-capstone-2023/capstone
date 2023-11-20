@@ -1,46 +1,21 @@
-// import './Footer.css';
-// import '../IntroducePage.css';
 
-function Footer() {
+export default function Footer() {
 
     return (
-        <footer>
-            <div className="coment">
-                <div className="cloud_introduce">
-                    <div className="introduce_aws">
-                        <div className="introduce_p"><p>아마존</p></div>
-                    </div>
-                    <div className="introduce_naver">
-                        <div className="introduce_p"><p>네이버</p></div>
-                    </div>
-                    <div className="introduce_gcp">
-                        <div className="introduce_p"><p>구글</p></div>
-                    </div>
-                    <div className="introduce_micro">
-                        <div className="introduce_p"><p>마이크로</p></div>
-                    </div>
-                    <div className="introduce_samsung">
-                        <div className="introduce_p"><p>삼성</p></div>
-                    </div>
-                </div>
-                <hr />
-                <div className="add_coment">
-                    <div className="creater">
+            <div className="container">
+                <hr/>
+                <footer className="row">
+                    <div className="col">
                         <h5>Creaters</h5>
-                        <p style={{ color : '#7a7a7a', paddingLeft: '20px', marginTop: '4px'}}>이건창, 서정운, 이나겸, 쑤와디</p>
+                        <p>이건창, 서정운, 이나겸, 쑤와디</p>
                     </div>
-                    <div className="github">
+                    <div className="col">
                         <h5>Github Link</h5>
-                        <p style={{ color : '#7a7a7a', paddingLeft: '20px', marginTop: '4px' }}>http://...</p>
+                        <p>https://github.com/pukyong-capstone-2023/capstone</p>
                     </div>
-                    <div className="develops">
-                        <h5>Develops</h5>
-                        <p style={{ color : '#7a7a7a', paddingLeft: '20px', marginTop: '4px' }}>chart.js 사용..</p>
-                    </div>
-                </div>
+                    <div className="col"/>
+                    <div className="col"/>
+                </footer>
             </div>
-        </footer>
     );
 };
-
-export default Footer;
