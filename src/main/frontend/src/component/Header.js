@@ -4,7 +4,7 @@ import titleImg from '../img/pngegg.png';
 
 function Header() {
     return(
-        <Navbar>
+        <Navbar className="bg-info text-white">
             <Navbar.Brand href="/" style={{ display:'flex' }}>
                     <img src = {titleImg}/>
                     <h1>Team 올린엄지</h1>
