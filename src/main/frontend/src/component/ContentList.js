@@ -51,7 +51,7 @@ ContentList.SelectMonth = ({ selectedMonth, setSelectedMonth }) => {
             <div class="card-body">
                 <h3 className="card-title">기간</h3>
                 <div class="card-text">
-                    <input type="text" class="form-control form-control-sm" value={selectedMonth} nChange={update}/>
+                    <input type="text" class="form-control form-control-sm" value={selectedMonth} onChange={update}/>
                 </div>
             </div>
         </div>
