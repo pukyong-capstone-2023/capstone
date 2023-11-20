@@ -15,7 +15,7 @@ function ChartComponent({data}) {
     };
 
     return(
-        <div className='col-12'>
+        <div className='col-12 mb-3'>
             <Line data={scaffold} />
         </div>
     );
