@@ -2,7 +2,8 @@
 export default function Footer() {
 
     return (
-            <div className="container bg-dark bg-opacity-10 p-3">
+            <div className="container">
+                <hr/>
                 <footer className="row">
                     <div className="col">
                         <h5>Creaters</h5>
