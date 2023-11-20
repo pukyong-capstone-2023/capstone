@@ -2,7 +2,7 @@
 
 function AddContent() {
     return (
-        <div class="card-group" style={{display: 'flex', justifyContent: 'center'}}>
+        <div class="card-group justify-content-center">
             <div class="card border-info mb-3" style={{maxWidth: "18rem"}}>
                 <div class="card-header">NCloud</div>
                 <div class="card-body"><p class="card-text">Naver Cloud의 메모리 크기는 GB 단위입니다.</p></div>
