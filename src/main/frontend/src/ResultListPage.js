@@ -25,7 +25,7 @@ function ResultListPage() {
 
     return (
         <Container>
-            <Row style={{marginTop:"50px"}}>
+            <Row>
                 <ContentList>
                     <ContentList.SelectClouds 
                         clouds={clouds}
@@ -47,10 +47,8 @@ function ResultListPage() {
                         setSelectedMemory={setSelectedMemory}
                     />
                 </ContentList>
-                <div style={{marginTop:"80px", marginBottom:"50px"}}>
-                    <ChartComponent data={filteredData} />
-                </div>
-                    <RecommendedCloud data={filteredData} />
+                <ChartComponent data={filteredData} />
+                <RecommendedCloud data={filteredData} />
                 <AddContent />
             </Row>
         </Container>

@@ -1,7 +1,7 @@
 
 function ContentList({ children }) {
     return (
-        <div className="col-12">
+        <div className="col-12 mb-3">
             <div className="row">
                 {children}
             </div>
@@ -25,15 +25,14 @@ ContentList.SelectClouds = ({ clouds, selectedClouds, setSelectedClouds }) => {
 
     return (
 
-        <div class="card text-bg-info mb-3" style={{maxWidth: "18rem", margin:"20px"}}>
-            <div class="card-header"><h3>Cloud 선택</h3></div>
+        <div class="col card text-bg-info m-3">
             <div class="card-body">
-                {clouds.map((cloud, idx) => (
-                <div class="card-text" style={{marginTop: "20px"}} key={idx}>
-                    <label style={{display:"flex", alignItems: "center"}}>
-                        <input type="checkbox" onChange={() => toggleCloud(cloud)} style={{marginRight: "10px"}} />{cloud}</label>
+                <h3 className="card-title">Cloud 선택</h3>
+                <div class="card-text">
+                    {clouds.map((cloud, idx) => 
+                        <div><input key={idx} type="checkbox" className="me-1" onChange={() => toggleCloud(cloud)} />{cloud}</div>
+                    )}
                 </div>
-                ))}
             </div>
         </div>
     );
@@ -48,16 +47,11 @@ ContentList.SelectMonth = ({ selectedMonth, setSelectedMonth }) => {
     }
 
     return (
-        <div class="card text-bg-info mb-3" style={{maxWidth: "18rem", margin:"20px"}}>
-            <div class="card-header"><h3>기간</h3></div>
+        <div class="col card text-bg-info m-3">
             <div class="card-body">
-                <div class="card-text" style={{marginTop: "40px"}}>
-                    <div class="card-header"><h5>사용기간</h5></div><label>
-                    <div style={{display:'flex'}}>
+                <h3 className="card-title">기간</h3>
+                <div class="card-text">
                     <input type="text" class="form-control form-control-sm" value={selectedMonth} nChange={update}/>
-                    <button type="button" style={{marginLeft:"10px"}} class="btn btn-light btn-sm">설정</button>
-                    </div>
-             </label>
                 </div>
             </div>
         </div>
@@ -73,11 +67,11 @@ ContentList.SelectCPU = ({ vcpus, selectedVcpu, setSelectedVcpu }) => {
     }
 
     return (
-        <div class="card text-bg-info mb-3" style={{maxWidth: "18rem", margin:"20px"}}>
-            <div class="card-header"><h3>CPU 선택</h3></div>
+        <div class="col card text-bg-info m-3">
             <div class="card-body">
-                <div class="card-text" style={{marginTop: "40px"}}>
-                    <select class="form-select form-select-lg mb-3" aria-label="Large select example" onChange={update} value={selectedVcpu}>
+                <h3 className="card-title">CPU 선택</h3>
+                <div class="card-text">
+                    <select class="form-select form-select-sm mb-3" aria-label="Large select example" onChange={update} value={selectedVcpu}>
                  {vcpus.map((vcpu, idx) => (
                      <option id={idx} value={vcpu}>{vcpu}</option>
                  ))}
@@ -97,11 +91,11 @@ ContentList.SelectMemory = ({ memories, selectedMemory, setSelectedMemory }) => 
     }
 
     return (
-        <div class="card text-bg-info mb-3" style={{maxWidth: "18rem", margin:"20px"}}>
-            <div class="card-header"><h3>MEMORY 선택</h3></div>
+        <div class="col card text-bg-info m-3">
             <div class="card-body">
-                <div class="card-text" style={{marginTop: "40px"}}>
-                <select select class="form-select form-select-lg mb-3" aria-label="Large select example" onChange={update} value={selectedMemory}>
+                <h3 className="card-title">MEMORY 선택</h3>
+                <div class="card-text">
+                <select select class="form-select form-select-sm mb-3" aria-label="Large select example" onChange={update} value={selectedMemory}>
                  {memories.map((memory, idx) => (
                      <option id={idx} value={memory}>{memory}GiB(GB)</option>
                  ))}
