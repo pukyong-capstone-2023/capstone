@@ -16,7 +16,7 @@ const RecommendedCloud = ({data}) => {
 const CloudScaffold = ({data}) => {
     const cheapest = data.sort((l,r) => l["Cost per hour"] - r["Cost per hour"])[0];
     return (
-        <div className="row m-2">
+        <div className="p-3 row m-2 bg-info bg-opacity-10 border border-info">
             <div className="col-6">
                 <h3>Cloud</h3>
                 <p>{cheapest.Vender}</p>

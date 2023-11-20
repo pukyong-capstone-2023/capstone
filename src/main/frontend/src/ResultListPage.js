@@ -1,7 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import ContentList from "./component/ContentList";
 import AddContent from './component/AddContent';
-import Footer from './component/Footer';
 import ChartComponent from './component/ChartComponent.js';
 import data from './data'
 import { useState } from 'react';
@@ -26,7 +25,7 @@ function ResultListPage() {
 
     return (
         <Container>
-            <Row>
+            <Row style={{marginTop:"50px"}}>
                 <ContentList>
                     <ContentList.SelectClouds 
                         clouds={clouds}
@@ -48,10 +47,11 @@ function ResultListPage() {
                         setSelectedMemory={setSelectedMemory}
                     />
                 </ContentList>
-                <ChartComponent data={filteredData} />
-                <RecommendedCloud data={filteredData} />
+                <div style={{marginTop:"80px", marginBottom:"50px"}}>
+                    <ChartComponent data={filteredData} />
+                </div>
+                    <RecommendedCloud data={filteredData} />
                 <AddContent />
-                <Footer />
             </Row>
         </Container>
     );
