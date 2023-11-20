@@ -5,7 +5,9 @@ const RecommendedCloud = ({data}) => {
     return (
         <div className="col-12 mb-2 bg-info bg-opacity-10 border border-info">
             {
-                data.length === 0? "": <CloudScaffold data={data} />
+                data.length === 0 ? 
+                <div className="text-center p-5">클라우드를 선택해주세요!</div> :
+                <CloudScaffold data={data} />
             }
         </div>
     )
