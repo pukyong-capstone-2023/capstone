@@ -25,7 +25,7 @@ ContentList.SelectClouds = ({ clouds, selectedClouds, setSelectedClouds }) => {
 
     return (
 
-        <div class="col card text-bg-info m-3">
+        <div class="col card shadow m-3">
             <div class="card-body">
                 <h3 className="card-title">Cloud 선택</h3>
                 <div class="card-text">
@@ -47,7 +47,7 @@ ContentList.SelectMonth = ({ selectedMonth, setSelectedMonth }) => {
     }
 
     return (
-        <div class="col card text-bg-info m-3">
+        <div class="col card shadow m-3">
             <div class="card-body">
                 <h3 className="card-title">기간</h3>
                 <div class="card-text">
@@ -67,7 +67,7 @@ ContentList.SelectCPU = ({ vcpus, selectedVcpu, setSelectedVcpu }) => {
     }
 
     return (
-        <div class="col card text-bg-info m-3">
+        <div class="col card shadow m-3">
             <div class="card-body">
                 <h3 className="card-title">CPU 선택</h3>
                 <div class="card-text">
@@ -91,7 +91,7 @@ ContentList.SelectMemory = ({ memories, selectedMemory, setSelectedMemory }) => 
     }
 
     return (
-        <div class="col card text-bg-info m-3">
+        <div class="col card shadow m-3">
             <div class="card-body">
                 <h3 className="card-title">MEMORY 선택</h3>
                 <div class="card-text">
