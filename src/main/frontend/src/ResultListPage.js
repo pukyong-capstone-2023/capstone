@@ -6,6 +6,7 @@ import ChartComponent from './component/ChartComponent.js';
 import data from './data'
 import { useState } from 'react';
 import { Row } from 'react-bootstrap';
+import RecommendedCloud from './component/RecommendedCloud.js';
 
 function ResultListPage() {
 
@@ -48,6 +49,7 @@ function ResultListPage() {
                     />
                 </ContentList>
                 <ChartComponent data={filteredData} />
+                <RecommendedCloud data={filteredData} />
                 <AddContent />
                 <Footer />
             </Row>
