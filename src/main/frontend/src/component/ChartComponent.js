@@ -14,8 +14,6 @@ function ChartComponent({data}) {
         ],
     };
 
-    console.log("mockup", scaffold)
-
     return(
         <div className='col-12'>
             <Line data={scaffold} />
@@ -47,7 +45,6 @@ const buildLineData = (data) => {
             borderWidth: 2,
             data: [...Array(12).keys()].map((n) => element["Cost per hour"] * n * 30),
         }
-        console.log(ret)
         return ret
     })
 }
